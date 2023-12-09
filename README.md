@@ -1,82 +1,208 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## 🚀 About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-> Vamos conhecer o Filament, um conjunto de modulos com muitos componentes que irão acelerar o desenvolvimento de nossas aplicações web.
->O Filament se baseia na `Tall` Stack (`TailWindCSS`, `AlpineJS`, `Laravel`, `Livewire`) e neste projeto vamos desenvolver um projeto 
->de clinica de exemplo da documentação e adicionar novas funcionalidades.
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-<p align="center">
-	<a href="#"  target="_blank" title="Diagrama">
-		<img src="public/images/diagram.jpg" alt="Diagram filament" style="border-radius: 5px;" width="600">
+	<a href="#"  target="_blank" title="Visite CorporatiX">
+		<img src="./themes/cardapioweb/assets/images/site/menu_banner.jpg" alt="Sistema CMS CorporatiX" style="width: 100%; border-radius: 10px; filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));">
 	</a>
 </p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<p align="center">Sistema CMS CorporatiX - <a href="https://www.corporatix.online">https://www.corporatix.online</a></p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p align="center">
+	<img src="https://img.shields.io/badge/version project-2.0-brightgreen" alt="version project">
+    <img src="https://img.shields.io/badge/Php-8.2.12-informational" alt="stack project">
+    <img src="https://img.shields.io/badge/Laravel-10.1-informational&color=brightgreen" alt="stack project">
+    <img src="https://img.shields.io/badge/Filament-3.0.1-informational" alt="stack project">
+    <img src="https://img.shields.io/badge/TailwindCss-3.1-informational" alt="stack project">
+    <img src="https://img.shields.io/static/v1?label=Composer&message=2.6.5&color=brightgreen?style=for-the-badge" alt="stack project">
+	<a href="https://opensource.org/licenses/GPL-3.0">
+		<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GPLv3 License">
+	</a>
+</p>
 
-## Laravel Sponsors
+<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## planejamento do sistema [`CMS CorporatiX`](https://www.corporatix.online/)
+Checklist das etapas de planejamento para a atualização e desenvolvimento do `sistema web corporatix`.
+##### Ideação
+- Sobre sistema
+- Fatores Responsáveis pela Mudança
+- Visões da Qualidade de Software
+- Requisitos de software
 
-### Premium Partners
+##### Prototipagem
+- Diagrama Entidade-Relacionamento (DER)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-- :heavy_check_mark: [Site Filament laravel](https://filamentphp.com/).
-- :heavy_check_mark: [Get started Filament](https://filamentphp.com/docs).
-- :heavy_check_mark: [Panel Builder Installation](https://filamentphp.com/docs/3.x/panels/installation).
+##### Detalhes técnicos
+- Definir arquitetura do projeto
+- Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
+
+<hr style="border: #0d0c22 2px solid; margin-top: 5px; margin-bottom: 5px; "/>
+
+## Ideação
+
+A ideia deste projeto é criar um `sistema web totalmente mordeno`, com um site que possa ter todas qualidades de desenvolvimento, 
+atendendo a todos requisitos de um `poderoso CMS` para gerenciamento de todas entidades de uma empresa. Sistemas assim, fazem 
+uma grande diferença nas relações de pessoas e negocios em uma empresa.
+
+### Sobre
+
+[`CorporatiX`](https://corporatix.online/) será um sistema de Gestão de Conteúdos, de forma bem direta, o CMS permitirá que você crie, organize, publique, 
+configure e apague conteúdos do site. O grande diferencial do CMS, como o próprio nome diz, é a possibilidade de gerenciar 
+conteúdo dinâmico de uma forma simples, ou seja, manter um blog, loja virtual ou outro tipo de site que precisa ser atualizado 
+de forma constante. Então o CMS é a solução ideal para todo mundo que precisa de um site que não seja 100% estático e momentâneo.
 
 
-## Contributing
+### Fatores Responsáveis pela Mudança
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+:star: Foco no Cliente :star: Evolução da Tecnologia
 
-## Code of Conduct
+#### Foco no Cliente
+- Tendência em geral e percepção da qualidade (visão do cliente).
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Evolução da Tecnologia
+- Aparecimento de novos recursos e facilidades, elevação dos padrões mínimos de expectativa do cliente, inovação tecnológica deixou de ser diferencial competitivo e
+passou a ser atributo da qualidade.
 
-## Security Vulnerabilities
+> hoje em dia, interface gráfica em uma aplicação é considerada condição básica, e não diferencial competitivo.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Para este update do sistema [`CorporatiX`](https://corporatix.online/), vamos `atualizar todas tecnologias`, deste a sua 
+stack base `PHP` e `framework Laravel` até suas `bibliotecas e dependencias`. Além disso, a ídeia é adicionarmos uma ferramenta 
+muito bem conceituada que será o `Filament`, que irá agilizar com segurança todo desenvolvimento admnistrativo do CMS, o 
+Filament neste momento do desenvolvimento está em sua versão 3.0 e será de grande sucesso para o projeto. Outro detalhes 
+nesta versão, é que vamos `modificar a estrutura de classes`, seu diagrama, para melhor atender as novas funcionalidades que 
+vamos criar e listar.
 
-## License
+### Visões da Qualidade de Software
+- :star: USUÁRIO - :star: DESENVOLVEDOR - :star: GERENTE
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Visão do Usuário
+ O usuário está interessado na utilização e no desempenho do
+software
+ Há interesse nas medidas externas de qualidade:
+– as funções especificadas estão disponíveis?
+– qual é a confiabilidade do software e sua eficiência?
+– é fácil de usar?
+– é fácil para transferir para outro ambiente operacional
+ Características construtivas não interessam
+
+#### Visão do Desenvolvedor
+ Deve ser coerente com as expectativas do usuário
+ requisitos + aceitação
+ Interesse em medidas internas de qualidade
+– ex: controle de caminhos + tempo de espera = tempo de
+resposta
+ Consideração da qualidade de produtos intermediários
+
+#### Visão do Gerente de Desenvolvimento
+ Medida global da qualidade
+ combinação ponderada de atributos e objetivos da
+empresa
+ Equilíbrio da melhoria de qualidade do produto com outros
+critérios:
+– prazo
+– custo
+ Visão é indica a necessidade de uma abordagem mais
+abrangente
+ mais próximo do conceito de qualidade de processo
+
+### Requisitos de software
+
+Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
+sendo atendidos.
+
+
+##### Os requisitos `funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
+- [RF001] O Sistema deve autenticar o usuários e administradores.
+- [RF001] O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
+- [RF001] O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
+- [RF003] O sistema terá controle de acesso a funcionalidades a partir dos perfis de usuários e administrador do sistema.
+- [RF004] O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
+- [RF005] O Sistema deve ter estatiscas do trávego de navegação dos usuários.
+- [RF006] O Sistema deve ter administração de perguntas frequentes (`analise`).
+- [RF007] O Sistema deve ter administração de produtos com CRUD.
+- [RF008] O Sistema deve ter administração de categorias (`CRUD`) e relações.
+- [RF009] O Sistema deve ter administração dos artigos (`CRUD`) e relações.
+- [RF010] O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
+- [RF011] O Sistema deve ter paginação nas listagens.
+- [RF012] O Sistema deve ter administração de configurações do site.
+- [RF013] O Sistema deve ter somente um registro de configuração.
+- [RF014] O Sistema não pode permitir deletar o registro de configuração.
+- [RF015] O Sistema deve permitir .....
+- [RF016] O Sistema deve permitir registro de e-mail de usuário.
+- [RF017] O Sistema deve permitir a administração da listagem do e-mails registrado.
+- [RF018] O Sistema deve permitir mudar o status de e-mail registrado.
+- [RF019] O Sistema deve permitir contato dos usuário via WhatsApp.
+- [RF020] O sistema deverá ter integração do login com o servidor de autenticação baseado em OAuth do Google e/ou Facebook somente se o usuário já tiver cadastro anteriormente, caso contrário, ele deverá realizar o cadastro.
+- [RF021] O sistema terá um menu de opções que dê acesso a todas as funcionalidades que o sistema provê dependendo do seu perfil de acesso.
+- [RF022] O sistema terá estruturado funcionalidades cadastrais listadas abaixo com telas completas e utilizando as operações de CRUD (Create/Retrieve/Update/Delete). Dependendo da regra de negócio, não será utilizado atualização e deletar.
+- [RF023] O usuário deverá ter cadastro de endereço, onde poderá realizar no momento de criação ou em outro momento.
+- [RF024] O usuário deverá ter cadastro de seu cargo e sua edição e exclusão só poderá ser realizado pelos administradores.
+- [RF025] O usuário deverá ter cadastro de sua unidade atual e sua edição e exclusão só poderá ser realizado pelos administradores.
+- [RF026] O sistema permitirá o cadastro das funcionalidades de uma publicação do sistema para administradores. As notícias deverão ter formatação de seu texto, uma imagem que poderá ser feito seu download pelos usuários, uma validade, e sua (s) categoria (s) pré cadastradas anteriormente por um usuário admin. Contando também com likes e deslikes (gostar e não gostar das publicações), visualizações e comentários feitos por qualquer usuário.
+- [RF027] O usuário deverá ter cadastro de categorias se necessário para as publicações.
+- [RF028] O usuário deverá ter cadastro de comentários se necessário para todos usuários, não sendo necessário ter edição e exclusão do comentário, somente se a publicação for excluída o comentário será deletado.
+- [RF029] O usuário deverá ter cadastro de questionários e imagem se necessário. Os questionários poderão ter uma ou mais questões que terão 4 opções de resposta cadastradas e esses questionários só poderão ser respondidos pelos usuários após finalização.
+- [RF030] O sistema deverá ter a funcionalidade de exportação de dados em formato Excel ou PDF nas entidades cargos, categorias, notícias, pedidos de solicitação, questionários, unidades e usuários. 
+- [RF031] Nos campos do cadastro que estão associados a outras entidades do sistema, o usuário deverá ter o mecanismo de lookup dos dados (combobox ou janela de seleção), assim podendo selecionar mais rapidamente o item.
+- [RF032] O sistema deve apresentar pelo menos uma tela em que seja feito cadastro de dados em estrutura mestre/detalhe (duas entidades associadas).
+- [RF033] O sistema deve apresentar pelo menos 3 telas de processamento de transações com suas respectivas regras de negócio a partir das entidades do sistema.
+- [RF034] O sistema terá uma tela de relatório (dashboard) com as estatísticas do sistema de forma gráfica (gráfico de barras, gráfico de linhas, etc.) em que sejam mostrados pelo menos 5 indicadores. Os gráficos que serão mostrados:
+- [RF035] Gráfico de publicações criadas por mês.
+- [RF035] Gráfico geral de likes (gostar) realizados.
+- [RF036] Gráfico de publicações por usuário.
+- [RF038] Gráfico com total de usuários por cargo.
+- [RF039] Gráfico com total de usuários por unidade.
+- [RF040] Além dos gráficos, o sistema deverá mostrar quantos usuários estão online no momento, total de publicações, usuários cadastrados ativos, questionários, visualizações, comentários, categorias, deslikes com porcentagem e listagem com total de questionário respondidos por usuário.
+- [RF041] O sistema permitirá o cadastro das permissões de acesso.
+- [RF042] O sistema deverá ter um canal com os ramais de todos colaboradores.
+- [RF043] O sistema deverá apresentar na tela inicial a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
+
+###### requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
+- [RNF001] O sistema deve ser implementado em Php.
+- [RNF002] O sistema deve utilizar framework laravel.
+- [RNF003] O sistema deve implementado em Php.
+- [RNF004] O sistema deve implementar o Filament na área administrativa.
+- [RNF005] O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
+- [RNF006] O sistema será implementado na arquitetura MVC.
+- [RNF007] O sistema deve utilizar TailWindCss.
+- [RNF008] O sistema deve ser implementado utilizando componentes para melhor agilidade de desenvolvimento.
+- [RNF009] O site deve ser 100% responsivo.
+- [RNF010] O site deve ter segurança contra ataques.
+
+
+#### Requisitos seguidos
+:star: `Funcionalidade` – Funções do software, que determinam o que o sistema faz. Direcionada para o atendimento dos requisitos do usuário.
+:star: `Confiabilidade` – Atributos que têm impacto na capacidade do software de manter o seu nível de desempenho, dentro de condições estabelecidas, por um dado período de tempo.
+:star: `Usabilidade` - Atributos que respondem pela facilidade de uso do software por usuários com perfil específico.
+:star: `Eficiência` – Relação entre o nível de desempenho do software e a quantidade de recursos utilizada, sob condições de uso pré-definidas.
+:star: `Manutenibilidade` – Medida do esforço necessário para fazer alterações, extensões e complementações no produto de software.
+:star: `Portabilidade` – Facilidade do produto de software ser transferido para outro ambiente computacional e funcionar adequadamente.
+
+## Prototipagem
+
+A etapa de front end no projeto é uma etapa que estou me desenvolvendo e me atualizando cada vez mais, buscando as melhores praticas de estilização,
+codifificação e sempre buscando desafios, com tecnologias novas. 
+E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e personalização para uma experiencia de interface moderna, prática para usuários.
+
+<p align="center">
+	<a href="#"  target="_blank" title="Visit Menu Digital home page">
+		<img src="./themes/cardapioweb/assets/images/site/web_tablet.png" alt="Menu Digital" width="500" style="filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));">
+	</a>
+</p>
+
+- Diagrama Entidade-Relacionamento (DER)
+
+> O diagrama de classes é a representação estática utilizada para descrever a estrutura do sistema, apresentando as classes, atributos, operações e as relações entre os objetos.
+
+
+<div align="center">
+    <h4>Diagrama de classes</h4>
+    <img src="/diagram-menu.jpg" width="580" style="border-radius: 10px;">
+</div>
+
+O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https://staruml.io/)
+
 
 ### :star: Contatos
 
