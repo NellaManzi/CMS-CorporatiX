@@ -14,15 +14,23 @@ return new class extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(\App\Models\User::class);
+            $table->foreignIdFor(\App\Models\Category::class)->nullable();
             $table->string('title');
             $table->string('slug');
             $table->string('subTitle')->nullable();
             $table->string('summary')->nullable();
             $table->longText('content');
             $table->dateTime('published_at')->nullable();
-            $table->boolean('status')->default(false);
+            $table->dateTime('scheduled_for')->nullable();
+            $table->enum('status', [
+                'draft',
+                'published',
+                'pending review',
+                'scheduled',
+                'private'
+            ])->default('draft');
             $table->integer('views')->nullable(0);
-            $table->string('cover')->default('storage/default_article.jpg');
+            $table->string('featured_image_url')->nullable();
             $table->timestamps();
         });
     }

@@ -116,7 +116,7 @@ sendo atendidos.
 - [RF001] O Sistema deve autenticar o usuários e administradores.
 - [RF001] O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
 - [RF001] O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
-- [RF003] O sistema terá controle de acesso a funcionalidades a partir dos perfis de usuários e administrador do sistema.
+- [RF003] O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
 - [RF004] O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
 - [RF005] O Sistema deve ter estatiscas do trávego de navegação dos usuários.
 - [RF006] O Sistema deve ter administração de perguntas frequentes (`analise`).
@@ -202,6 +202,12 @@ E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e pe
 </div>
 
 O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https://staruml.io/)
+
+## Lista de tecnologias implementadas
+##### A listagem contem todas `bibliotecas/pacotes instalados` e configurados para desenvolver e auxiliar nas funcionalidades.
+- [001] :label: Framework Laravel  
+- [002] :label: Filament  
+- [003] :label: Spatie Permissions
 
 
 ### :star: Contatos
