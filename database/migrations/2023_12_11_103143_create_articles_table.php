@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\User::class);
-            $table->foreignIdFor(\App\Models\Category::class)->nullable();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('title');
             $table->string('slug');
             $table->string('subTitle')->nullable();
             $table->string('summary')->nullable();
-            $table->longText('content');
+            $table->longText('content')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->dateTime('scheduled_for')->nullable();
             $table->enum('status', [

@@ -11,7 +11,7 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = ['id', 'user_id', 'category_id', 'title', 'slug'];
 
     public function author(): BelongsTo
     {
