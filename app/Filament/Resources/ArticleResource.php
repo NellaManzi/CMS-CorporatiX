@@ -79,7 +79,7 @@ class ArticleResource extends Resource
                                 ->preload()
                                 ->relationship('user', 'name'),
 
-                            Select::make('category')
+                            Select::make('category_id')
                                 ->label('Categoria')
                                 ->preload()
                                 ->relationship('category', 'name'),
@@ -152,7 +152,7 @@ class ArticleResource extends Resource
 
             ])
             ->filters([
-                //
+
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
