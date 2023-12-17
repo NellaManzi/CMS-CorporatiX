@@ -8,11 +8,13 @@ use App\Models\Category;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
+use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -27,8 +29,11 @@ class CategoryResource extends Resource
     protected static ?string $pluralModelLabel = "Categorias";
     protected static ?string $modelLabel = "Categoria";
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-bookmark';
 
+    /**
+     * Form create or edit category
+    */
     public static function form(Form $form): Form
     {
         return $form
@@ -43,22 +48,15 @@ class CategoryResource extends Resource
             ]);
     }
 
+    /**
+     * table category list
+     */
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('name')->searchable(),
+                TextColumn::make('articles_count')->counts('articles')->label('Artigos pertencentes'),
             ])
             ->filters([
                 //
@@ -74,6 +72,9 @@ class CategoryResource extends Resource
             ]);
     }
 
+    /**
+     * view category info
+     */
     public static function infolist(Infolist $infolist): Infolist
     {
         return $infolist->schema([
@@ -84,6 +85,9 @@ class CategoryResource extends Resource
         ])->columns(3);
     }
 
+    /**
+     * Relations with category
+     */
     public static function getRelations(): array
     {
         return [
@@ -91,6 +95,9 @@ class CategoryResource extends Resource
         ];
     }
 
+    /**
+     * route categories
+     */
     public static function getPages(): array
     {
         return [

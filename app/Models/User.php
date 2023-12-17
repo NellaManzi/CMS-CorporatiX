@@ -8,21 +8,36 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use function Filament\Tables\Filters\boolean;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'email', 'password'];
+    protected $guarded = ['id'];
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'status',
+        'birth',
+        'bio',
+        'marital_status',
+        'academic_education',
+        'phone',
+        'branch_line',
+        'avatar'
+    ];
 
     protected $hidden = ['password', 'remember_token',];
 
-    protected $casts = ['email_verified_at' => 'datetime', 'password' => 'hashed',];
+    protected $casts = ['email_verified_at' => 'datetime', 'last_acess' => 'datetime', 'password' => 'hashed', 'status' => 'boolean'];
 
 
     public function articles(): HasMany
     {
-        $this->hasMany(Article::class);
+        return $this->hasMany(Article::class);
     }
 
 }
