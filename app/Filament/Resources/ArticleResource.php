@@ -5,8 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Filament\Resources\ArticleResource\RelationManagers;
 use App\Models\Article;
+use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
@@ -14,6 +17,7 @@ use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
@@ -26,10 +30,13 @@ use Filament\Tables;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Filament\Forms\Components\Builder;
+use Filament\Forms\Get;
+
 
 class ArticleResource extends Resource
 {
@@ -48,19 +55,27 @@ class ArticleResource extends Resource
             ->schema([
 
                 // ** Title and slug
-                Forms\Components\TextInput::make('title')->label('Título do artigo')
+                TextInput::make('title')->label('Título do artigo')
                     ->required()
+                    ->hint(fn (Get $get) => $get('slug'))
                     ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                    ->afterStateUpdated(function (Set $set, $state) {
+                        $set('slug', Str::slug($state));
+                    }),
 
-                Forms\Components\Select::make('status')
-                ->options([
-                    'draft'             => 'Rascunho',
-                    'published'         => 'Publicar',
-                    'pending review'    => 'Pendente para analise',
-                    'scheduled'         => 'Programado',
-                    'private'           => 'Privado'
-                ]),
+                Select::make('status')
+                    ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o status do seu artigo.')->hintColor('primary')
+                    ->options([
+                        'draft'             => 'Rascunho',
+                        'published'         => 'Publicar',
+                        'pending review'    => 'Pendente para analise',
+                        'scheduled'         => 'Programado',
+                        'private'           => 'Privado'
+                    ])
+                    ->live()
+                    ->required(),
+
+                DateTimePicker::make('published_at')->hidden(fn (Get $get) => $get('status') !== 'published'),
 
                 Tabs::make('Create article')->tabs([
 
@@ -77,14 +92,15 @@ class ArticleResource extends Resource
                             Select::make('user_id')
                                 ->label('Autor')
                                 ->preload()
-                                ->relationship('user', 'name'),
+                                ->relationship('author', 'name'),
+
+//                            Placeholder::make('total')->content(fn (Get $get) => Auth::user()->name),
 
                             Select::make('category_id')
                                 ->label('Categoria')
                                 ->preload()
                                 ->relationship('category', 'name'),
 
-                            Forms\Components\DateTimePicker::make('published_at')->label('Publicar'),
 
                             FileUpload::make('featured_image_url')
                                 ->label('Imagem do artigo')
@@ -98,7 +114,7 @@ class ArticleResource extends Resource
                     Tab::make('Conteudo')
                         ->icon('heroicon-m-inbox')
                         ->schema([
-                            Forms\Components\TextInput::make('subTitle')->label('Sub Titulo')
+                            TextInput::make('subTitle')->label('Sub Titulo')
                                 ->required(),
 
                             Textarea::make('summary')->label('Resumo')
@@ -145,14 +161,30 @@ class ArticleResource extends Resource
             ->columns([
                 TextColumn::make('title')->limit(20)->sortable()->searchable(),
                 TextColumn::make('category.name')->label('Categoria'),
-                TextColumn::make('user.name'),
-                TextColumn::make('tags.name'),
+                TextColumn::make('author.name'),
+                TextColumn::make('tags.name')->badge(),
                 BooleanColumn::make('published_at'),
 
 
             ])
             ->filters([
+                SelectFilter::make('status')->options([
+                    'draft'             => 'Rascunho',
+                    'published'         => 'Publicar',
+                    'pending review'    => 'Pendente para analise',
+                    'scheduled'         => 'Programado',
+                    'private'           => 'Privado'
+                ]),
 
+                SelectFilter::make('category_id')
+                    ->label('Categorias')
+                    ->relationship('category', 'name')->preload()
+                    ->multiple(),
+
+                SelectFilter::make('tags')
+                    ->label('tags')
+                    ->relationship('tags', 'name')->preload()
+                    ->multiple(),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),

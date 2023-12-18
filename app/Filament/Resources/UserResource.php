@@ -6,10 +6,13 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
@@ -20,6 +23,7 @@ use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class UserResource extends Resource
 {
@@ -62,7 +66,13 @@ class UserResource extends Resource
                     ->onColor('success')
                     ->offColor('danger'),
 
-                Forms\Components\DateTimePicker::make('birth'),
+                DatePicker::make('birth')
+                    ->displayFormat(function () {
+                        return 'd/m/Y';
+                    }),
+
+
+
                 Forms\Components\Textarea::make('bio')
                     ->columnSpanFull(),
 
