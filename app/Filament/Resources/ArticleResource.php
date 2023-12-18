@@ -7,6 +7,7 @@ use App\Filament\Resources\ArticleResource\RelationManagers;
 use App\Models\Article;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Placeholder;
@@ -53,14 +54,18 @@ class ArticleResource extends Resource
     {
         return $form
             ->schema([
-
-                // ** Title and slug
-                TextInput::make('title')->label('Título do artigo')
+                Forms\Components\TextInput::make('title')
+                    ->label('Título do artigo')
                     ->required()
-                    ->live()
-                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                    ->maxLength(255)
+                    ->live(debounce: '1000')
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
 
-                TextInput::make('slug')->disabled()->unique('articles', 'slug'),
+                Forms\Components\TextInput::make('slug')
+                    ->maxLength(255)
+                    ->disabled()
+                    ->dehydrated()
+                    ->unique('articles', 'slug'),
 
                 Select::make('status')
                     ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o status do seu artigo.')->hintColor('primary')
@@ -74,9 +79,15 @@ class ArticleResource extends Resource
                     ->live()
                     ->required(),
 
-                DateTimePicker::make('published_at')->hidden(fn (Get $get) => $get('status') !== 'published'),
+                DatePicker::make('published_at')->hidden(fn (Get $get) => $get('status') !== 'published')
+                    ->displayFormat(function () {
+                        return 'd/m/Y';
+                    }),
 
-                DateTimePicker::make('scheduled_for')->hidden(fn (Get $get) => $get('status') !== 'scheduled'),
+                DatePicker::make('scheduled_for')->hidden(fn (Get $get) => $get('status') !== 'scheduled')
+                    ->displayFormat(function () {
+                        return 'd/m/Y';
+                    }),
 
                 Tabs::make('Create article')->tabs([
 
@@ -148,7 +159,7 @@ class ArticleResource extends Resource
                     ->schema([
                         // ...
                     ])
-            ]);
+                ]);
     }
 
     /**
@@ -159,6 +170,10 @@ class ArticleResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title')->limit(20)->sortable()->searchable(),
+                Tables\Columns\ImageColumn::make('featured_image_url')
+                    ->circular()
+                    ->defaultImageUrl(url('storage/app/public/image_posts'))
+                    ->label('Imagem'),
                 TextColumn::make('category.name')->label('Categoria'),
                 TextColumn::make('author.name'),
                 TextColumn::make('tags.name')->badge(),
