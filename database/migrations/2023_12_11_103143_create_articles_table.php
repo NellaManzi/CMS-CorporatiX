@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('subTitle')->nullable();
-            $table->string('summary')->nullable();
+            $table->text('summary')->nullable();
             $table->longText('content')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->dateTime('scheduled_for')->nullable();

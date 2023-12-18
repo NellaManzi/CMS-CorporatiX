@@ -57,11 +57,10 @@ class ArticleResource extends Resource
                 // ** Title and slug
                 TextInput::make('title')->label('Título do artigo')
                     ->required()
-                    ->hint(fn (Get $get) => $get('slug'))
                     ->live()
-                    ->afterStateUpdated(function (Set $set, $state) {
-                        $set('slug', Str::slug($state));
-                    }),
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
+
+                TextInput::make('slug')->disabled()->unique('articles', 'slug'),
 
                 Select::make('status')
                     ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o status do seu artigo.')->hintColor('primary')
@@ -76,6 +75,8 @@ class ArticleResource extends Resource
                     ->required(),
 
                 DateTimePicker::make('published_at')->hidden(fn (Get $get) => $get('status') !== 'published'),
+
+                DateTimePicker::make('scheduled_for')->hidden(fn (Get $get) => $get('status') !== 'scheduled'),
 
                 Tabs::make('Create article')->tabs([
 
@@ -93,8 +94,6 @@ class ArticleResource extends Resource
                                 ->label('Autor')
                                 ->preload()
                                 ->relationship('author', 'name'),
-
-//                            Placeholder::make('total')->content(fn (Get $get) => Auth::user()->name),
 
                             Select::make('category_id')
                                 ->label('Categoria')
