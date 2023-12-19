@@ -198,7 +198,7 @@ E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e pe
 
 <div align="center">
     <h4>Diagrama de classes</h4>
-    <img src="/public/image/readme/diagram.JPG" width="580" style="border-radius: 10px;">
+    <img src="/public/image/readme/diagram.JPG" width="100%">
 </div>
 
 O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https://staruml.io/)
