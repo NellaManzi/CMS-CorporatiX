@@ -14,7 +14,7 @@
                 <div class="p-4">
 
                     <div class="relative mb-1 flex items-center gap-x-4">
-                        <img src="{{asset("storage/".$article->author->avatar)}}">
+                        <img src="{{asset("storage/".$article->author->avatar)}}" class="w-10 h-10 rounded-full">
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
                                 <a href="#">

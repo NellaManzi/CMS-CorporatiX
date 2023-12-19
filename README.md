@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="#"  target="_blank" title="Visite CorporatiX">
-		<img src="./themes/cardapioweb/assets/images/site/menu_banner.jpg" alt="Sistema CMS CorporatiX" style="width: 100%; border-radius: 10px; filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));">
+		<img src="/public/image/readme/logo479x118.png" alt="Sistema CMS CorporatiX" style="width: 100%; border-radius: 10px; filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));">
 	</a>
 </p>
 
