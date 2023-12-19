@@ -186,8 +186,8 @@ codifificação e sempre buscando desafios, com tecnologias novas.
 E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e personalização para uma experiencia de interface moderna, prática para usuários.
 
 <p align="center">
-	<a href="#"  target="_blank" title="Visit Menu Digital home page">
-		<img src="./themes/cardapioweb/assets/images/site/web_tablet.png" alt="Menu Digital" width="500" style="filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));">
+	<a href="#"  target="_blank" title="logo">
+		<img src="/public/image/readme/logo250x62.png" alt="logo" width="250">
 	</a>
 </p>
 
