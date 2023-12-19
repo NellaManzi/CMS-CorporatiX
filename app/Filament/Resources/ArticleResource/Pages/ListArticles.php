@@ -16,4 +16,11 @@ class ListArticles extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            ArticleResource\Widgets\ArticleStatsOverview::class,
+        ];
+    }
 }

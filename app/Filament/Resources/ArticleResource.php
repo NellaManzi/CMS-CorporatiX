@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Filament\Resources\ArticleResource\RelationManagers;
+use App\Filament\Resources\ArticleResource\Widgets\ArticleStatsOverview;
 use App\Models\Article;
 use App\Models\User;
 use Filament\Forms;
@@ -267,6 +268,13 @@ class ArticleResource extends Resource
     {
         return [
             //
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+           ArticleStatsOverview::class
         ];
     }
 
