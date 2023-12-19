@@ -10,8 +10,10 @@ class Grid extends Component
     public function render()
     {
         $articles = Article::limit(3)->get();
+        $titleSection = 'Artigos';
 
         return view('livewire.article.grid', [
+            'title' => $titleSection,
             'articles' => $articles,
         ]);
     }

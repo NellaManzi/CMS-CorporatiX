@@ -22,6 +22,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
+use Filament\Infolists\Components\Group;
+use Filament\Infolists\Components\IconEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\Section as SectionInfo;
 use Filament\Infolists\Components\TextEntry;
@@ -44,6 +46,10 @@ class ArticleResource extends Resource
     protected static ?string $model = Article::class;
 
     protected static ?string $navigationGroup = "Blog";
+
+
+    protected static ?string $pluralModelLabel = "Artigos";
+    protected static ?string $modelLabel = "Artigo";
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -224,11 +230,30 @@ class ArticleResource extends Resource
                 SectionInfo::make([
                     TextEntry::make('title')
                         ->size('lg')->weight('bold')->hiddenLabel(),
-                    ImageEntry::make('featured_image_url')
+                    ImageEntry::make('featured_image_url')->view('article-image'),
+
+                    TextEntry::make('content')
+                    ->hiddenLabel()
+                    ->html()
+                    ->alignJustify(),
 
                 ])->columnSpan(2),
 
                 SectionInfo::make([
+
+                    Group::make([
+                        TextEntry::make('created_at')
+                        ->date(),
+                        TextEntry::make('updated_at')
+                            ->date(),
+
+                        TextEntry::make('author.name')->color('primary'),
+                        IconEntry::make('published_at')->boolean(),
+                    ])->columns(2),
+
+                    TextEntry::make('category.name')->badge()->separator(','),
+
+                    TextEntry::make('tags.name')->badge()->color('gray')->separator(','),
 
                 ])->columnSpan(1),
 

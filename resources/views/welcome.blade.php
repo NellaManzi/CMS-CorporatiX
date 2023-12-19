@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CorporatiX Landing Page</title>
     <meta name="description" content="Get started with a free landing page built with Tailwind CSS and the Flowbite Blocks system.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet">
     @vite('resources/css/app.css')
 </head>
@@ -411,22 +412,12 @@
         </div>
     </section>
 
-    {{--  --}}
-    <section class="bg-white py-8 dark:bg-gray-800">
-        <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-            <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 dark:text-white">
-                Blog
-            </h2>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-
-            {{-- --}}
-            <livewire:article.grid/>
+    {{-- BLOG/ARTICLES --}}
+    <livewire:article.grid/>
 
 
-        </div>
-    </section>
+
+
 
     {{--  --}}
     <section class="bg-gray-100 py-8 dark:bg-gray-800">
@@ -746,6 +737,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+
 </body>
 </html>
