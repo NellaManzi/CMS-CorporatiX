@@ -6,12 +6,13 @@
 
 <br>
 
-<p align="center">Sistema CMS CorporatiX - <a href="https://www.corporatix.online">https://www.corporatix.online</a></p>
+<p align="center">:sparkles: Sistema CMS CorporatiX :sparkles: - <a href="https://www.corporatix.online">https://www.corporatix.online</a></p>
 
 <p align="center">
 	<img src="https://img.shields.io/badge/version project-2.0-brightgreen" alt="version project">
     <img src="https://img.shields.io/badge/Php-8.2.12-informational" alt="stack project">
     <img src="https://img.shields.io/badge/Laravel-10.1-informational&color=brightgreen" alt="stack project">
+    <img src="https://img.shields.io/badge/Livewire-3.0-informational&color=brightgreen" alt="stack project">
     <img src="https://img.shields.io/badge/Filament-3.0.1-informational" alt="stack project">
     <img src="https://img.shields.io/badge/TailwindCss-3.1-informational" alt="stack project">
     <img src="https://img.shields.io/static/v1?label=Composer&message=2.6.5&color=brightgreen?style=for-the-badge" alt="stack project">
@@ -22,30 +23,36 @@
 
 <br>
 
-## planejamento do sistema [`CMS CorporatiX`](https://www.corporatix.online/)
+## :rocket: planejamento do sistema [`CMS CorporatiX`](https://www.corporatix.online/)
 Checklist das etapas de planejamento para a atualização e desenvolvimento do `sistema web corporatix`.
-##### Ideação
-- Sobre sistema
-- Fatores Responsáveis pela Mudança
-- Visões da Qualidade de Software
-- Requisitos de software
 
-##### Prototipagem
-- Diagrama Entidade-Relacionamento (DER)
+### :label: Ideação
+##### - Sobre sistema
+##### - Fatores Responsáveis pela Mudança
+##### - Visões da Qualidade de Software
+##### - Requisitos de software
 
-##### Detalhes técnicos
-- Definir arquitetura do projeto
-- Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
+### :label: Prototipagem
+##### - Diagrama Entidade-Relacionamento (DER)
+
+### :label: Detalhes técnicos
+##### - Definir arquitetura do projeto
+##### - Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
+##### - Problemas e desafios encontrados
+##### - Prototipagem finais
+##### - Conclusão final
+
+### :label: Contatos
 
 <hr style="border: #0d0c22 2px solid; margin-top: 5px; margin-bottom: 5px; "/>
 
-## Ideação
+## :heavy_check_mark: Ideação
 
 A ideia deste projeto é criar um `sistema web totalmente mordeno`, com um site que possa ter todas qualidades de desenvolvimento, 
 atendendo a todos requisitos de um `poderoso CMS` para gerenciamento de todas entidades de uma empresa. Sistemas assim, fazem 
 uma grande diferença nas relações de pessoas e negocios em uma empresa.
 
-### Sobre
+### :ok_hand: Sobre
 
 [`CorporatiX`](https://corporatix.online/) será um sistema de Gestão de Conteúdos, de forma bem direta, o CMS permitirá que você crie, organize, publique, 
 configure e apague conteúdos do site. O grande diferencial do CMS, como o próprio nome diz, é a possibilidade de gerenciar 
@@ -53,7 +60,7 @@ conteúdo dinâmico de uma forma simples, ou seja, manter um blog, loja virtual 
 de forma constante. Então o CMS é a solução ideal para todo mundo que precisa de um site que não seja 100% estático e momentâneo.
 
 
-### Fatores Responsáveis pela Mudança
+### :ok_hand: Fatores Responsáveis pela Mudança
 
 :star: Foco no Cliente :star: Evolução da Tecnologia
 
@@ -73,7 +80,7 @@ Filament neste momento do desenvolvimento está em sua versão 3.0 e será de gr
 nesta versão, é que vamos `modificar a estrutura de classes`, seu diagrama, para melhor atender as novas funcionalidades que 
 vamos criar e listar.
 
-### Visões da Qualidade de Software
+#### Visões da Qualidade de Software
 - :star: USUÁRIO - :star: DESENVOLVEDOR - :star: GERENTE
 
 #### Visão do Usuário
@@ -87,43 +94,36 @@ software
  Características construtivas não interessam
 
 #### Visão do Desenvolvedor
- Deve ser coerente com as expectativas do usuário
- requisitos + aceitação
- Interesse em medidas internas de qualidade
-– ex: controle de caminhos + tempo de espera = tempo de
-resposta
- Consideração da qualidade de produtos intermediários
+:heavy_plus_sign: Deve ser coerente com as expectativas do usuário - `requisitos + aceitação`.
+:heavy_plus_sign: Interesse em medidas internas de qualidade.
+– ex: controle de caminhos + tempo de espera = tempo de resposta.
+:heavy_plus_sign: Consideração da qualidade de produtos intermediários.
 
 #### Visão do Gerente de Desenvolvimento
- Medida global da qualidade
- combinação ponderada de atributos e objetivos da
-empresa
- Equilíbrio da melhoria de qualidade do produto com outros
-critérios:
-– prazo
-– custo
- Visão é indica a necessidade de uma abordagem mais
-abrangente
- mais próximo do conceito de qualidade de processo
+:heavy_plus_sign: Medida global da qualidade - combinação ponderada de atributos e objetivos da empresa.
+:heavy_plus_sign: Equilíbrio da melhoria de qualidade do produto com outros critérios:
+– `prazo`
+– `custo`
+:heavy_plus_sign: Visão é indica a necessidade de uma abordagem mais abrangente - mais próximo do conceito de qualidade de processo.
 
-### Requisitos de software
+### :ok_hand: Requisitos de software
 
 Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
 sendo atendidos.
 
 
 ##### Os requisitos `funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
-- [RF001] O Sistema deve autenticar o usuários e administradores.
+- [RF001]:white_check_mark: O Sistema deve autenticar o usuários e administradores.
 - [RF001] O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
 - [RF001] O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
 - [RF003] O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
-- [RF004] O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
+- [RF004]:white_check_mark: O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
 - [RF005] O Sistema deve ter estatiscas do trávego de navegação dos usuários.
 - [RF006] O Sistema deve ter administração de perguntas frequentes (`analise`).
-- [RF007] O Sistema deve ter administração de produtos com CRUD.
-- [RF008] O Sistema deve ter administração de categorias (`CRUD`) e relações.
-- [RF009] O Sistema deve ter administração dos artigos (`CRUD`) e relações.
-- [RF010] O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
+- [RF007] O Sistema deve ter administração de .... com CRUD.
+- [RF008]:white_check_mark: O Sistema deve ter administração de categorias (`CRUD`) e relações.
+- [RF009]:white_check_mark: O Sistema deve ter administração dos artigos (`CRUD`) e relações.
+- [RF010]:white_check_mark: O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
 - [RF011] O Sistema deve ter paginação nas listagens.
 - [RF012] O Sistema deve ter administração de configurações do site.
 - [RF013] O Sistema deve ter somente um registro de configuração.
@@ -159,27 +159,27 @@ sendo atendidos.
 - [RF043] O sistema deverá apresentar na tela inicial a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
 
 ###### requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
-- [RNF001] O sistema deve ser implementado em Php.
-- [RNF002] O sistema deve utilizar framework laravel.
-- [RNF003] O sistema deve implementado em Php.
-- [RNF004] O sistema deve implementar o Filament na área administrativa.
-- [RNF005] O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
-- [RNF006] O sistema será implementado na arquitetura MVC.
-- [RNF007] O sistema deve utilizar TailWindCss.
-- [RNF008] O sistema deve ser implementado utilizando componentes para melhor agilidade de desenvolvimento.
-- [RNF009] O site deve ser 100% responsivo.
-- [RNF010] O site deve ter segurança contra ataques.
+- [RNF001]:white_check_mark: O sistema deve ser implementado em Php.
+- [RNF002]:white_check_mark: O sistema deve utilizar framework laravel.
+- [RNF003]:white_check_mark: O sistema deve implementado em componentes livewire.
+- [RNF004]:white_check_mark: O sistema deve implementar o Filament na área administrativa.
+- [RNF005]:white_check_mark: O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
+- [RNF006]:white_check_mark: O sistema será implementado na arquitetura MVC.
+- [RNF007]:white_check_mark: O sistema deve utilizar TailWindCss.
+- [RNF008]:white_check_mark: O sistema deve ser implementado utilizando componentes para melhor agilidade de desenvolvimento.
+- [RNF009]:white_check_mark: O site deve ser 100% responsivo.
+- [RNF010]:white_check_mark: O site deve ter segurança contra ataques.
 
 
 #### Requisitos seguidos
-:star: `Funcionalidade` – Funções do software, que determinam o que o sistema faz. Direcionada para o atendimento dos requisitos do usuário.
-:star: `Confiabilidade` – Atributos que têm impacto na capacidade do software de manter o seu nível de desempenho, dentro de condições estabelecidas, por um dado período de tempo.
-:star: `Usabilidade` - Atributos que respondem pela facilidade de uso do software por usuários com perfil específico.
-:star: `Eficiência` – Relação entre o nível de desempenho do software e a quantidade de recursos utilizada, sob condições de uso pré-definidas.
-:star: `Manutenibilidade` – Medida do esforço necessário para fazer alterações, extensões e complementações no produto de software.
-:star: `Portabilidade` – Facilidade do produto de software ser transferido para outro ambiente computacional e funcionar adequadamente.
+- :star: `Funcionalidade` – Funções do software, que determinam o que o sistema faz. Direcionada para o atendimento dos requisitos do usuário.
+- :star: `Confiabilidade` – Atributos que têm impacto na capacidade do software de manter o seu nível de desempenho, dentro de condições estabelecidas, por um dado período de tempo.
+- :star: `Usabilidade` - Atributos que respondem pela facilidade de uso do software por usuários com perfil específico.
+- :star: `Eficiência` – Relação entre o nível de desempenho do software e a quantidade de recursos utilizada, sob condições de uso pré-definidas.
+- :star: `Manutenibilidade` – Medida do esforço necessário para fazer alterações, extensões e complementações no produto de software.
+- :star: `Portabilidade` – Facilidade do produto de software ser transferido para outro ambiente computacional e funcionar adequadamente.
 
-## Prototipagem
+## :heavy_check_mark: Prototipagem
 
 A etapa de front end no projeto é uma etapa que estou me desenvolvendo e me atualizando cada vez mais, buscando as melhores praticas de estilização,
 codifificação e sempre buscando desafios, com tecnologias novas. 
@@ -202,6 +202,22 @@ E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e pe
 </div>
 
 O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https://staruml.io/)
+
+## :heavy_check_mark: Detalhes técnicos
+
+### Definir arquitetura do projeto
+
+
+### Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
+
+
+### Problemas e desafios encontrados
+
+
+### Prototipagem finais
+
+
+### Conclusão final
 
 ## Lista de tecnologias implementadas
 ##### A listagem contem todas `bibliotecas/pacotes instalados` e configurados para desenvolver e auxiliar nas funcionalidades.
