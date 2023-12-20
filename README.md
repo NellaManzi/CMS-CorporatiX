@@ -113,17 +113,17 @@ sendo atendidos.
 
 
 ##### Os requisitos `funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
-- [RF001]:white_check_mark: O Sistema deve autenticar o usuários e administradores.
+- [RF001] :white_check_mark: O Sistema deve autenticar o usuários e administradores.
 - [RF001] O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
 - [RF001] O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
 - [RF003] O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
-- [RF004]:white_check_mark: O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
+- [RF004] :white_check_mark: O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
 - [RF005] O Sistema deve ter estatiscas do trávego de navegação dos usuários.
 - [RF006] O Sistema deve ter administração de perguntas frequentes (`analise`).
 - [RF007] O Sistema deve ter administração de .... com CRUD.
-- [RF008]:white_check_mark: O Sistema deve ter administração de categorias (`CRUD`) e relações.
-- [RF009]:white_check_mark: O Sistema deve ter administração dos artigos (`CRUD`) e relações.
-- [RF010]:white_check_mark: O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
+- [RF008] :white_check_mark: O Sistema deve ter administração de categorias (`CRUD`) e relações.
+- [RF009] :white_check_mark: O Sistema deve ter administração dos artigos (`CRUD`) e relações.
+- [RF010] :white_check_mark: O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
 - [RF011] O Sistema deve ter paginação nas listagens.
 - [RF012] O Sistema deve ter administração de configurações do site.
 - [RF013] O Sistema deve ter somente um registro de configuração.
@@ -159,16 +159,16 @@ sendo atendidos.
 - [RF043] O sistema deverá apresentar na tela inicial a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
 
 ###### requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
-- [RNF001]:white_check_mark: O sistema deve ser implementado em Php.
-- [RNF002]:white_check_mark: O sistema deve utilizar framework laravel.
-- [RNF003]:white_check_mark: O sistema deve implementado em componentes livewire.
-- [RNF004]:white_check_mark: O sistema deve implementar o Filament na área administrativa.
-- [RNF005]:white_check_mark: O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
-- [RNF006]:white_check_mark: O sistema será implementado na arquitetura MVC.
-- [RNF007]:white_check_mark: O sistema deve utilizar TailWindCss.
-- [RNF008]:white_check_mark: O sistema deve ser implementado utilizando componentes para melhor agilidade de desenvolvimento.
-- [RNF009]:white_check_mark: O site deve ser 100% responsivo.
-- [RNF010]:white_check_mark: O site deve ter segurança contra ataques.
+- [RNF001] :white_check_mark: O sistema deve ser implementado em Php.
+- [RNF002] :white_check_mark: O sistema deve utilizar framework laravel.
+- [RNF003] :white_check_mark: O sistema deve implementado em componentes livewire.
+- [RNF004] :white_check_mark: O sistema deve implementar o Filament na área administrativa.
+- [RNF005] :white_check_mark: O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
+- [RNF006] :white_check_mark: O sistema será implementado na arquitetura MVC.
+- [RNF007] :white_check_mark: O sistema deve utilizar TailWindCss.
+- [RNF008] :white_check_mark: O sistema deve ser implementado utilizando componentes para melhor agilidade de desenvolvimento.
+- [RNF009] :white_check_mark: O site deve ser 100% responsivo.
+- [RNF010] :white_check_mark: O site deve ter segurança contra ataques.
 
 
 #### Requisitos seguidos
