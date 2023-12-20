@@ -72,7 +72,7 @@ class ArticleResource extends Resource
                     ->maxLength(255)
                     ->disabled()
                     ->dehydrated()
-                    ->unique('articles', 'slug'),
+                    ->unique(ignoreRecord: true),
 
                 Select::make('status')
                     ->hintIcon('heroicon-m-question-mark-circle', tooltip: 'Selecione o status do seu artigo.')->hintColor('primary')

@@ -17,7 +17,7 @@
                         <img src="{{asset("storage/".$article->author->avatar)}}" class="w-10 h-10 rounded-full">
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
-                                <a href="#">
+                                <a href="{{route('category.show', $article->id)}}">
                                     <span class="absolute inset-0"></span>
                                     {{$article->author->name}} • <time> {{date_format($article->published_at,"Y/m/d")}} </time>
                                     <span class="bg-purple-100 text-purple-800 text-xs font-medium me-4 px-2 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
