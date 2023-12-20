@@ -231,7 +231,7 @@ class ArticleResource extends Resource
                 SectionInfo::make([
                     TextEntry::make('title')
                         ->size('lg')->weight('bold')->hiddenLabel(),
-                    ImageEntry::make('featured_image_url')->view('article-image'),
+                    ImageEntry::make('featured_image_url')->view('filament/article-image'),
 
                     TextEntry::make('content')
                     ->hiddenLabel()

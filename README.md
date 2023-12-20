@@ -229,8 +229,8 @@ O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https:/
 - :label: :heavy_check_mark: Configurações de seeders e factories.
 - :label: :heavy_check_mark: Configurações do .env, app/config.
 - :label: :heavy_check_mark: Criação das Resources do Filament das migrates.
-- :label: :boom: Configurações das Resources de form, table, infolist.
-- :label: :boom: Ajustes da Home e criação de componentes livewire.
+- :label: :boom: Configurações da ArticleResource de form, table, infolist.
+- :label: :boom: Ajustes da section blog com component article\Grid.
 - :label: 
 - :label: 
 - :label: 
