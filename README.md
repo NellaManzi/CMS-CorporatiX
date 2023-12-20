@@ -219,11 +219,23 @@ O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https:/
 
 ### Conclusão final
 
-## Lista de tecnologias implementadas
-##### A listagem contem todas `bibliotecas/pacotes instalados` e configurados para desenvolver e auxiliar nas funcionalidades.
-- [001] :label: Framework Laravel  
-- [002] :label: Filament  
-- [003] :label: Spatie Permissions
+## Lista simples de desenvolvimento
+##### A listagem contem todos passos de desenvolvimento, `bibliotecas, pacotes instalados` e configurados para auxiliar nas funcionalidades.
+- :label: :heavy_check_mark: Framework Laravel  
+- :label: :heavy_check_mark: Filament  
+- :label: :heavy_check_mark: Criação das migrates User, Article, Category, Tags e table pivo.
+- :label: :heavy_check_mark: Configurações de propriedades das migrates e models.
+- :label: :heavy_check_mark: Criação de controllers de todas migrates.
+- :label: :heavy_check_mark: Configurações de seeders e factories.
+- :label: :heavy_check_mark: Configurações do .env, app/config.
+- :label: :heavy_check_mark: Criação das Resources do Filament das migrates.
+- :label: :boom: Configurações das Resources de form, table, infolist.
+- :label: :boom: Ajustes da Home e criação de componentes livewire.
+- :label: 
+- :label: 
+- :label: 
+- :label: 
+- :label: 
 
 
 ### :star: Contatos
