@@ -234,9 +234,7 @@ class ArticleResource extends Resource
                     ImageEntry::make('featured_image_url')->view('filament/article-image'),
 
                     TextEntry::make('content')
-                    ->hiddenLabel()
-                    ->html()
-                    ->alignJustify(),
+                    ->hiddenLabel()->alignJustify()->view('filament/article-content')->html(),
 
                 ])->columnSpan(2),
 

@@ -13,17 +13,17 @@
 
                 <div class="p-4">
 
-                    <div class="relative mb-1 flex items-center gap-x-4">
+                    <div class="mb-1 flex items-center gap-x-4">
                         <img src="{{asset("storage/".$article->author->avatar)}}" class="w-10 h-10 rounded-full">
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
-                                <a href="{{route('category.show', $article->id)}}">
+                                <div>
                                     <span class="absolute inset-0"></span>
                                     {{$article->author->name}} • <time> {{date_format($article->published_at,"Y/m/d")}} </time>
-                                    <span class="bg-purple-100 text-purple-800 text-xs font-medium me-4 px-2 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
+                                    <a href="{{route('category.show', $article->category)}}" class="bg-purple-100 text-purple-800 text-xs font-medium me-4 px-2 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
                                         {{Str($article->category->name)->ucfirst()}}
-                                    </span>
-                                </a>
+                                    </a>
+                                </div>
                             </p>
                         </div>
                     </div>
