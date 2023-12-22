@@ -13,8 +13,8 @@ class WebController extends Controller
         return view('public.home');
     }
 
-    public function showArticle(Article $article)
+    public function showArticle()
     {
-        return dd($article);
+        return view('public.home');
     }
 }
