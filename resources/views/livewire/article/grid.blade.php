@@ -28,7 +28,7 @@
                         </div>
                     </div>
 
-                    <h3 class="text-xl font-medium text-gray-900">{{$article->title}}</h3>
+                    <h3 class="text-xl font-medium text-gray-900"><a href="{{route('article.show', $article)}}">{{$article->title}}</a></h3>
                     <p class="mt-1 text-gray-500">{{$article->subTitle}}.</p>
 
                     <div class="mt-4 flex gap-2">
