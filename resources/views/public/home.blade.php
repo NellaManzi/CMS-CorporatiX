@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="">
+<html lang="pt-br">
 <head>
     {{--  --}}
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CorporatiX Landing Page</title>
     <meta name="description" content="Get started with a free landing page built with Tailwind CSS and the Flowbite Blocks system.">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-    <link href="./output.css" rel="stylesheet">
+
+
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -774,9 +774,6 @@
             </div>
         </div>
     </footer>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 </body>
 </html>
