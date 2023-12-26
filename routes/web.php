@@ -16,9 +16,7 @@ Route::get('/', [WebController::class, 'home'])->name('web.home');
 
 
 Route::get('category/{category}', [CategoryController::class, 'show'])->name('category.show');
-
-
-Route::get('/article', [\App\Models\Article::class, 'index'])->name('article.show');
+Route::get('/article/{article}', [WebController::class, 'showArticle'])->name('article.show');
 
 
 
