@@ -163,6 +163,7 @@ sendo atendidos.
 - [RNF002] :white_check_mark: O sistema deve utilizar framework laravel.
 - [RNF003] :white_check_mark: O sistema deve implementado em componentes livewire.
 - [RNF004] :white_check_mark: O sistema deve implementar o Filament na área administrativa.
+- [RNF004] :white_check_mark: Para alguns dos teste usar o Debugbar.
 - [RNF005] :white_check_mark: O sistema deve utiilizar o banco de dados (`phpMyAdmin`) MySql.
 - [RNF006] :white_check_mark: O sistema será implementado na arquitetura MVC.
 - [RNF007] :white_check_mark: O sistema deve utilizar TailWindCss.

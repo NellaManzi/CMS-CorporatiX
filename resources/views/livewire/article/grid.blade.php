@@ -18,7 +18,7 @@
                         <div class="text-sm leading-6">
                             <p class="font-semibold text-gray-900">
                                 <div>
-                                    <span class="absolute inset-0"></span>
+                                    <span class="inset-0"></span>
                                     {{$article->author->name}} • <time> {{date_format($article->published_at,"Y/m/d")}} </time>
                                     <a href="{{route('category.show', $article->category)}}" class="bg-purple-100 text-purple-800 text-xs font-medium me-4 px-2 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
                                         {{Str($article->category->name)->ucfirst()}}
