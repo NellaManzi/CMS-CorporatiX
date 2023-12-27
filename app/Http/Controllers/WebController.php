@@ -10,11 +10,16 @@ class WebController extends Controller
 {
     public function home()
     {
-        return view('public.home');
+        return view('public.landing');
     }
 
     public function showArticle()
     {
-        return view('public.home');
+        return view('public.landing');
+    }
+
+    public function test()
+    {
+        return view('app.home');
     }
 }

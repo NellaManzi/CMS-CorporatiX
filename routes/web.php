@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 |GET|HEAD  | /                      | web.home           | WebController@home
 */
 Route::get('/', [WebController::class, 'home'])->name('web.home');
+Route::get('/layout', [WebController::class, 'test'])->name('web.test');
 
 
 
