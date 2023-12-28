@@ -18,8 +18,13 @@ class WebController extends Controller
         return view('public.landing');
     }
 
-    public function test()
+    public function notFound()
     {
-        return view('app.home');
+        return view('app.pages.404');
+    }
+
+    public function dashboard()
+    {
+        return view('app.pages.home');
     }
 }
