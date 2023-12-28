@@ -13,6 +13,9 @@ class WebController extends Controller
         return view('public.landing');
     }
 
+    /**
+     * Tests views layout
+    */
     public function showArticle()
     {
         return view('public.landing');
@@ -26,5 +29,30 @@ class WebController extends Controller
     public function dashboard()
     {
         return view('app.pages.home');
+    }
+
+    public function settings()
+    {
+        return view('app.pages.settings');
+    }
+
+    public function settings1()
+    {
+        return '';
+    }
+
+    public function settings2()
+    {
+        return '';
+    }
+
+    public function settings3()
+    {
+        return '';
+    }
+
+    public function settings4()
+    {
+        return '';
     }
 }

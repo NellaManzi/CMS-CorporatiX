@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WebController::class, 'home'])->name('web.home');
 Route::get('/app/dashboard', [WebController::class, 'dashboard'])->name('web.dashboard');
 Route::get('/notFound', [WebController::class, 'notFound'])->name('web.404');
+Route::get('/app/settings', [WebController::class, 'settings'])->name('web.settings');
 
 
 

@@ -19,6 +19,10 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('web.dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('App intranet') }}
+                    </x-nav-link>
                 </div>
             </div>
 
