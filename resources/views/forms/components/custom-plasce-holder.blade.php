@@ -1,8 +1,2 @@
-<x-dynamic-component
-    :component="$getFieldWrapperView()"
-    :field="$field"
->
-    <div x-data="{ state: $wire.$entangle('{{ $getStatePath() }}') }">
-        <!-- Interact with the `state` property in Alpine.js -->
-    </div>
-</x-dynamic-component>
+<h3 class="text-xl font-semibold dark:text-white">{{$getLabel()}}</h3>
+<p class="font-light text-gray-500 sm:text-sm dark:text-gray-400 mb-2">{{$getContent()}}</p>
