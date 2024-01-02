@@ -2,38 +2,50 @@
 
 @section('content')
 
-    <form method="POST" action="{{ route('login') }}" class="flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900">
-        @csrf
-        <a href="#" class="flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white">
-            <img src="{{asset('image/readme/logo479x118.png')}}" class="mr-4 h-20" alt="{{ config('app.name')}} Logo">
-        </a>
-        <!-- Card -->
-        <div class="w-full max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow dark:bg-gray-800">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-                Sign in to platform
-            </h2>
-            <form class="mt-8 space-y-6" action="#">
-                <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                           autofocus autocomplete="username" value="rafaelblum_digital@hotmail.com" required>
-                </div>
-                <div>
-                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
-                    <input type="password" name="password" id="password" placeholder="••••••••" autocomplete="current-password" value="123" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                </div>
-                <div class="flex items-start">
-                    <div class="flex items-center h-5">
-                        <input id="remember" aria-describedby="remember" name="remember" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                    </div>
-                    <div class="ml-3 text-sm">
-                        <label for="remember" class="font-medium text-gray-900 dark:text-white">Remember me</label>
-                    </div>
-                    <a href="#" class="ml-auto text-sm text-primary-700 hover:underline dark:text-primary-500">Lost Password?</a>
-                </div>
-                <button type="submit" class="w-full px-5 py-3 text-base font-medium text-center text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login to your account</button>
-            </form>
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 text-gray-800 dark:text-white">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm mt-6">
+            <img class="mx-auto h-10 w-auto" src="{{asset('image/readme/logo479x118.png')}}" alt="logo intranet login">
         </div>
-    </form>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form method="POST" action="{{ route('login') }}" class="space-y-6">
+                @csrf
+                    <div>
+                        <label for="email" class="block text-sm font-medium leading-6">Endereço de e-mail</label>
+                        <div class="mt-2">
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                   autofocus autocomplete="username" value="rafaelblum_digital@hotmail.com" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="block text-sm font-medium leading-6">Senha</label>
+                            <div class="text-sm">
+                                <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Esqueceu da sua senha?</a>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <input type="password" name="password" id="password" placeholder="••••••••"
+                                   autocomplete="current-password" value="123"
+                                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                   required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Acessar
+                        </button>
+                    </div>
+            </form>
+
+            <p class="mt-10 text-center text-sm">
+                Voltar para
+                <a href="{{ route('web.home') }}" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Home</a>?
+            </p>
+        </div>
+    </div>
+
 
 @endsection

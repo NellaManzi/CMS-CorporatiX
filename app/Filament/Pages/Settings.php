@@ -3,10 +3,13 @@
 namespace App\Filament\Pages;
 
 use App\Forms\Components\CustomPlasceHolder;
+use Filament\Forms\Components\Fieldset;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -59,155 +62,92 @@ class Settings extends Page
     {
         return $form
             ->schema([
-
-
-
-                        Section::make()
-                            ->columns(2)
-                            ->schema([
-
-                                Grid::make(2)
-                                    ->schema([
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-                                    ])->columns(2),
-
-
-                                Grid::make(2)
-                                    ->schema([
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-                                    ])->columns(2),
-
-                            ]),
-
-
-                        Section::make()
-                            ->columns([
-                                'sm' => 1,
-                                'xl' => 2,
-                                '2xl' => 2,
-                            ])
-                            ->schema([
-
-                                Grid::make(2)
-                                    ->schema([
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-                                    ])->columns(2),
-
-
-                                Grid::make(2)
-                                    ->schema([
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-
-                                        Section::make()
-                                            ->columns([
-                                                'sm' => 1,
-                                                'xl' => 2,
-                                                '2xl' => 2,
-                                            ])
-                                            ->schema([
-                                                TextInput::make('name'),
-                                                // ...
-                                            ]),
-                                    ])->columns(2),
-
-                            ]),
-
-
-
                 CustomPlasceHolder::make('title')
-                ->label('General information | ' . auth()->user()->name)
-                ->content('Best option for personal use & for your next project.'),
+                ->label('Informações gerais')
+                ->content('Pagina de personalização do perfil de usuário.'),
 
-                Group::make([
+
+//            Section::make()->schema([
+//                FileUpload::make('attachment'),
+//            ]),
+
+            Section::make()->schema([
+                Grid::make()->schema(self::primary()),
+
+            ]),
+
+
+
+                Grid::make(3)->schema([
                     TextInput::make('name')
+                        ->label('Nome')
                         ->required()
-                        ->label('Nome'),
-                    TextInput::make('email')
+                        ->maxLength(255),
+                    TextInput::make('quantity')
+                        ->label('Quantidade')
+                        ->minValue(1)
                         ->required()
-                        ->label('E-mail')
+                        ->numeric(),
+                    Section::make()->schema([
+                        FileUpload::make('image')
+                            ->name('Imagem')
+                            ->image()
+                            ->required(),
+                    ]),
+                ])->columns(3),
 
-                ])->columns(2),
 
-                Grid::make(2)
-                    ->schema([
-                        TextInput::make('teste')
-                            ->required()
-                            ->label('teste'),
-                        TextInput::make('teste')
-                            ->required()
-                            ->label('teste'),
-                    ])
+                Grid::make(2)->schema([
+                    RichEditor::make('description')
+                        ->label('Descrição')
+                        ->required()
+                        ->maxLength(255),
+                ])->columns(1),
+
+
+                FileUpload::make('image')
+                    ->name('Imagem')
+                    ->image()
+                    ->required(),
+
+                Select::make('category_id')
+                    ->label('Categoria')
+                    ->relationship('category', 'name')
+                    ->searchable()
+                    ->required(),
+
+
+//                Group::make([
+//                    TextInput::make('name')
+//                        ->required()
+//                        ->label('Nome'),
+//                    TextInput::make('email')
+//                        ->required()
+//                        ->label('E-mail')
+//
+//                ])->columns(2),
+
+
 
             ])->statePath('data');
+    }
+
+    protected static function primary(): array
+    {
+        return [
+            Group::make()->schema([
+                TextInput::make('Name')->required()->label('Name'),
+                TextInput::make('cpf')->required()->label('CPF'),
+            ]),
+
+        ];
+    }
+
+    protected static function sidebar(): array
+    {
+        return [
+            FileUpload::make('attachment'),
+        ];
     }
 
     public function create(): void

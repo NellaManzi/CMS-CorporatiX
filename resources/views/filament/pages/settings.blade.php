@@ -24,6 +24,7 @@
             </ol>
         </nav>
     </div>
+
     {{ $this->form }}
 
 
@@ -304,11 +305,6 @@
             </div>
         </div>
 
-
-
-
-
-
         {{--  --}}
         <div class="col-span-2">
             <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
@@ -471,7 +467,9 @@
         </div>
 
     </div>
+
     <div class="grid grid-cols-1 px-4 xl:grid-cols-2 xl:gap-4">
+
         <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800 xl:mb-0">
             <div class="flow-root">
                 <h3 class="text-xl font-semibold dark:text-white">Alerts & Notifications</h3>
@@ -527,6 +525,7 @@
                 </div>
             </div>
         </div>
+
         <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800 xl:mb-0">
             <div class="flow-root">
                 <h3 class="text-xl font-semibold dark:text-white">Email Notifications</h3>
@@ -583,4 +582,5 @@
             </div>
         </div>
     </div>
+
 </x-filament-panels::page>
