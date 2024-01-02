@@ -64,72 +64,87 @@ class Settings extends Page
             ->schema([
                 CustomPlasceHolder::make('title')
                 ->label('Informações gerais')
-                ->content('Pagina de personalização do perfil de usuário.'),
+                ->content('Pagina de personalização do perfil de usuário.')->columnSpan(3),
 
-
-//            Section::make()->schema([
-//                FileUpload::make('attachment'),
-//            ]),
-
-            Section::make()->schema([
-                Grid::make()->schema(self::primary()),
-
-            ]),
-
-
-
-                Grid::make(3)->schema([
-                    TextInput::make('name')
-                        ->label('Nome')
-                        ->required()
-                        ->maxLength(255),
-                    TextInput::make('quantity')
-                        ->label('Quantidade')
-                        ->minValue(1)
-                        ->required()
-                        ->numeric(),
+                /**
+                 * ASIDE COMPONENTS
+                */
+                Group::make()->schema([
                     Section::make()->schema([
-                        FileUpload::make('image')
-                            ->name('Imagem')
-                            ->image()
-                            ->required(),
+                        CustomPlasceHolder::make('title')
+                            ->label('Profile picture')
+                            ->content('JPG, GIF or PNG. Max size of 800K'),
+                        FileUpload::make('avatar')
+                            ->disk('public')
+                            ->directory('thumbnails')
+                            ->disableLabel(),
                     ]),
-                ])->columns(3),
 
+                    Section::make()->schema([
+                        CustomPlasceHolder::make('title')
+                            ->label('Profile picture')
+                            ->content('JPG, GIF or PNG. Max size of 800K'),
+                        FileUpload::make('avatar')
+                            ->disk('public')
+                            ->directory('thumbnails')
+                            ->disableLabel(),
+                    ]),
 
-                Grid::make(2)->schema([
-                    RichEditor::make('description')
-                        ->label('Descrição')
-                        ->required()
-                        ->maxLength(255),
-                ])->columns(1),
-
-
-                FileUpload::make('image')
-                    ->name('Imagem')
-                    ->image()
-                    ->required(),
-
-                Select::make('category_id')
-                    ->label('Categoria')
-                    ->relationship('category', 'name')
-                    ->searchable()
-                    ->required(),
-
-
-//                Group::make([
-//                    TextInput::make('name')
-//                        ->required()
-//                        ->label('Nome'),
-//                    TextInput::make('email')
-//                        ->required()
-//                        ->label('E-mail')
-//
-//                ])->columns(2),
+                ])->columnSpan(1)->columns(1),
 
 
 
-            ])->statePath('data');
+                /**
+                 * CONTENTS COMPONENTS
+                 */
+                Group::make()
+                    ->schema([
+                        Section::make()->schema([
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                            ])->columnSpan(2)->columns(2),
+
+                        Section::make()->schema([
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                                TextInput::make('name')
+                                    ->label('Nome')
+                                    ->required(),
+                                TextInput::make('email')
+                                    ->label('E-mail')
+                                    ->disabled(),
+                            ])->columnSpan(2)->columns(2),
+
+                    ])->columnSpan(2)->columns(2),
+
+
+            ])->statePath('data')->columns(3);
     }
 
     protected static function primary(): array
