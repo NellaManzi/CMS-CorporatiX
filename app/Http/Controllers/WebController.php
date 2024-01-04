@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
     public function home()
     {
-        return view('public.landing');
+        $setting = Setting::find(1);
+        return view('public.landing', compact('setting'));
     }
 
     /**

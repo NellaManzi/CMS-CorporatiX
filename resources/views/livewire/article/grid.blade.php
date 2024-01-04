@@ -3,10 +3,13 @@
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800 dark:text-white">
             {{$title}}
         </h2>
+
         <div class="w-full mb-4">
             <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-
+        <p class="w-full text-lg font-normal leading-tight text-center text-gray-500 sm:text-xl dark:text-gray-400 mb-3">
+            All types of businesses need access to development resources, so we give you the option to decide how much you need to use.
+        </p>
         @foreach($articles as $article)
             <div class="mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow mt-4">
                 <img src="{{asset("storage/".$article->featured_image_url)}}" class="aspect-video w-full object-cover" alt=""/>
