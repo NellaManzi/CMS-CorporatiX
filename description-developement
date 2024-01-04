@@ -1,0 +1,87 @@
+Filament:: app/Filament/Resources
+[ AdminPanel            ] -     app/Providers/Filament/AdminPanelProvider.php
+[ Page settings         ] -     app/Filament/Pages/Settings.php | resources/views/filament/pages/settings.blade.php
+[ Custom PlaceHolder    ] -     app/Forms/Components/CustomPlasceHolder.php | resources/views/forms/components/custom-plasce-holder.blade.php
+[ Component livewire    ] -     app/Livewire/Article/Grid.php | resources/views/livewire/article/grid.blade.php
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+
+
+Annotations
+
+Resources views:
+[ app ] -   Paginas para incluir no layout da home da intranet. Ajustar "rotas" e "Controllers".
+[ auth ] -  Ajustar page reset, verify email, forgot pass, confirm pass. Page register neste caso não terá, pois é um sistema fechado e só ADMIN registra algu, usuário.
+[ components, layouts, profile ] - Precisa ser verificado a necessidade ou alterações de logica e regra de negocio.
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+
+
+Dicas:
+[ dehydrated(false) ] - função que não enviar para back a propriedade.
+
+
+  ⇂ make:cast
+  ⇂ make:channel
+  ⇂ make:command
+  ⇂ make:component
+  ⇂ make:controller
+  ⇂ make:event
+  ⇂ make:exception
+  ⇂ make:factory
+  ⇂ make:filament-importer
+  ⇂ make:filament-page
+  ⇂ make:filament-panel
+  ⇂ make:filament-relation-manager
+  ⇂ make:filament-resource
+  ⇂ make:filament-theme
+  ⇂ make:filament-user
+  ⇂ make:filament-widget
+  ⇂ make:form-field
+  ⇂ make:form-layout
+  ⇂ make:infolist-entry
+  ⇂ make:infolist-layout
+  ⇂ make:job
+  ⇂ make:listener
+  ⇂ make:livewire
+  ⇂ make:livewire-form
+  ⇂ make:livewire-table
+  ⇂ make:mail
+  ⇂ make:middleware
+  ⇂ make:migration
+  ⇂ make:model
+  ⇂ make:notification
+  ⇂ make:observer
+  ⇂ make:policy
+  ⇂ make:provider
+  ⇂ make:request
+  ⇂ make:resource
+  ⇂ make:rule
+  ⇂ make:scope
+  ⇂ make:seeder
+  ⇂ make:table-column
+  ⇂ make:test
+  ⇂ make:view

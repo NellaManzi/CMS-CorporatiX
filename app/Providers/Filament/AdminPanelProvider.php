@@ -10,6 +10,7 @@ use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Widgets;
+use Illuminate\Contracts\View\View;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -22,7 +23,6 @@ class AdminPanelProvider extends PanelProvider
 {
     protected static ?string $title = 'Finance dashboard';
 
-
     public function panel(Panel $panel): Panel
     {
         return $panel
@@ -31,6 +31,11 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Corporatix')
+            ->darkModeBrandLogo(fn(): View => view('filament.brand-logo'))
+            //->brandLogoHeight(fn() => auth()->check() ? '1rem':'5rem')
+            ->brandLogo(asset('image/readme/iconLogoCorporatix.png'))
+            ->favicon(asset('image/readme/iconLogoCorporatix.png'))
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Fuchsia,

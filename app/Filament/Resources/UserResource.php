@@ -15,6 +15,7 @@ use Filament\Forms\Form;
 use Filament\Forms\Get;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
+use Filament\Resources\Components\Tab;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\EditAction;
@@ -24,9 +25,11 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class UserResource extends Resource
 {
+
     protected static ?string $model = User::class;
 
     protected static ?string $navigationGroup = "Admin Usuários";
@@ -63,6 +66,7 @@ class UserResource extends Resource
                             ->maxLength(255),
                         Forms\Components\TextInput::make('password')
                             ->password()
+                            ->required()
                             ->maxLength(255),
                     ]),
 
@@ -84,22 +88,17 @@ class UserResource extends Resource
 
                 Forms\Components\Select::make('marital_status')
                     ->label('Estado civil')
-                    ->options([
-                        'single'            => 'Solteiro',
-                        'married'           => 'Casado',
-                        'do-not-define'     => 'Prefere não definir',
-                    ])
+                    ->options(File::json(public_path('data/marital-status.json')))
+                    ->native(false)
                     ->required(),
 
 
                 Forms\Components\TextInput::make('academic_education')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
-                    ->telRegex('/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/')
-                    ->maxLength(255),
+                    ->mask('(99) 99999-9999'),
                 Forms\Components\TextInput::make('branch_line')
-                    ->numeric(),
+                    ->numeric()->mask('9999'),
                 FileUpload::make('avatar')
                     ->disk('public')
                     ->directory('thumbnails')->columnSpanFull(),
@@ -175,6 +174,16 @@ class UserResource extends Resource
     }
 
 
+    public function getTabs(): array
+    {
+        return [
+            'all' => Tab::make(),
+            'active' => Tab::make()
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', true)),
+            'inactive' => Tab::make()
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', false)),
+        ];
+    }
 
     public static function getRelations(): array
     {

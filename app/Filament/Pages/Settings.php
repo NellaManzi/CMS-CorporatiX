@@ -14,7 +14,9 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Pages\Page;
+use App\Models\User;
 
 
 class Settings extends Page
@@ -51,10 +53,12 @@ class Settings extends Page
 
     protected static string $view = 'filament.pages.settings';
 
+    public User $user;
     public ?array $data = [];
 
     public function mount(): void
     {
+        $this->user = auth()->user();
         $this->form->fill();
     }
 
@@ -70,6 +74,8 @@ class Settings extends Page
                  * ASIDE COMPONENTS
                 */
                 Group::make()->schema([
+
+                    // ** Avatar user
                     Section::make()->schema([
                         CustomPlasceHolder::make('title')
                             ->label('Profile picture')
@@ -80,15 +86,20 @@ class Settings extends Page
                             ->disableLabel(),
                     ]),
 
+                    // ** Password
                     Section::make()->schema([
-                        CustomPlasceHolder::make('title')
-                            ->label('Profile picture')
-                            ->content('JPG, GIF or PNG. Max size of 800K'),
-                        FileUpload::make('avatar')
-                            ->disk('public')
-                            ->directory('thumbnails')
-                            ->disableLabel(),
-                    ]),
+
+                        CustomPlasceHolder::make('password')
+                            ->label('Password information')
+                            ->content('Atualização de senha de segurança')->columnSpan(2),
+
+                        TextInput::make('password')
+                            ->label('Senha atual')
+                            ->password()
+                            ->required(),
+
+
+                    ])->columnSpan(1),
 
                 ])->columnSpan(1)->columns(1),
 
@@ -99,74 +110,72 @@ class Settings extends Page
                  */
                 Group::make()
                     ->schema([
+
+                        // ** Data user
                         Section::make()->schema([
-                                TextInput::make('name')
+                                TextInput::make('user.name')
                                     ->label('Nome')
                                     ->required(),
-                                TextInput::make('email')
+                                TextInput::make('user.email')
                                     ->label('E-mail')
                                     ->disabled(),
-                                TextInput::make('name')
-                                    ->label('Nome')
+                                TextInput::make('user.status')
+                                    ->label('Status do usuário')
                                     ->required(),
-                                TextInput::make('email')
-                                    ->label('E-mail')
-                                    ->disabled(),
+                                TextInput::make('user.birth')
+                                    ->label('Data anisversário'),
                                 TextInput::make('name')
-                                    ->label('Nome')
-                                    ->required(),
-                                TextInput::make('email')
-                                    ->label('E-mail')
-                                    ->disabled(),
+                                    ->label('Nome'),
+                            TextInput::make('user.marital_status')
+                                    ->label('Estado civil'),
+                            TextInput::make('user.phone')
+                                    ->label('Fone')->mask('(99) 99999-9999'),
+                            TextInput::make('user.branch_line')
+                                    ->label('Ramal')->numeric()->mask('9999'),
+                                RichEditor::make('user.bio')
+                                    ->label('Biografia')->columnSpan(2),
+
+                            /**
+                             * last_acess - Important
+                            */
+
                             ])->columnSpan(2)->columns(2),
 
-                        Section::make()->schema([
-                                TextInput::make('name')
-                                    ->label('Nome')
-                                    ->required(),
-                                TextInput::make('email')
-                                    ->label('E-mail')
-                                    ->disabled(),
-                                TextInput::make('name')
-                                    ->label('Nome')
-                                    ->required(),
-                                TextInput::make('email')
-                                    ->label('E-mail')
-                                    ->disabled(),
-                                TextInput::make('name')
-                                    ->label('Nome')
-                                    ->required(),
-                                TextInput::make('email')
-                                    ->label('E-mail')
-                                    ->disabled(),
-                            ])->columnSpan(2)->columns(2),
+
 
                     ])->columnSpan(2)->columns(2),
 
 
-            ])->statePath('data')->columns(3);
+            ])->statePath('data')->columns([
+                    'default' => 2,
+                    'sm' => 1,
+                    'md' => 2,
+                    'lg' => 2,
+                    'xl' => 2,
+                    '2xl' => 2
+            ]);
     }
 
-    protected static function primary(): array
-    {
-        return [
-            Group::make()->schema([
-                TextInput::make('Name')->required()->label('Name'),
-                TextInput::make('cpf')->required()->label('CPF'),
-            ]),
 
-        ];
-    }
 
-    protected static function sidebar(): array
+    public function submit(): void
     {
-        return [
-            FileUpload::make('attachment'),
-        ];
-    }
+        $data = $this->form->getState();
+        try{
 
-    public function create(): void
-    {
-        dd($this->form->getState());
+            $this->user->update($data);
+
+            Notification::make()
+                ->title('Usuário processado com sucesso!')
+                ->body('Usuário processado com sucesso!')
+                ->success()
+                ->send();
+        }catch (\Exception $e){
+            Notification::make()
+                ->title('Erro ao tentar enviar')
+                ->body('Erro:' . $e->getMessage())
+                ->danger()
+                ->send();
+        }
     }
 }
