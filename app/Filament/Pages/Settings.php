@@ -3,6 +3,7 @@
 namespace App\Filament\Pages;
 
 use App\Forms\Components\CustomPlasceHolder;
+use App\Models\Setting;
 use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
@@ -16,7 +17,6 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
-use App\Models\User;
 
 
 class Settings extends Page
@@ -36,15 +36,6 @@ class Settings extends Page
      *              - app/forms/Components
      *              - resources/views/forms/components
      *
-     *
-     * Group::make([
-        Placeholder::make('Title')
-        ->columnSpan(1),
-        TextInput::make('title')
-        ->required()
-        ->hiddenLabel()
-        ->columnSpan(5),
-        ])->columns(6),
     */
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
@@ -53,13 +44,23 @@ class Settings extends Page
 
     protected static string $view = 'filament.pages.settings';
 
-    public User $user;
+    public Setting $settings;
     public ?array $data = [];
 
     public function mount(): void
     {
-        $this->user = auth()->user();
-        $this->form->fill();
+        $this->settings = Setting::find(1);
+        $this->form->fill([
+            'header_name' => $this->settings->header_name,
+            'header_title' => $this->settings->header_title,
+            'header_description' => $this->settings->header_description,
+            'section_title' => $this->settings->section_title,
+            'section_subtitle' => $this->settings->section_subtitle,
+            'section_description' => $this->settings->section_description,
+            'footer_phone' => $this->settings->footer_phone,
+            'footer_email' => $this->settings->footer_email,
+            'section_about' => $this->settings->section_about,
+        ]);
     }
 
     public function form(Form $form): Form
@@ -80,10 +81,9 @@ class Settings extends Page
                         CustomPlasceHolder::make('title')
                             ->label('Profile picture')
                             ->content('JPG, GIF or PNG. Max size of 800K'),
-                        FileUpload::make('avatar')
+                        FileUpload::make('header_logo_url')
                             ->disk('public')
-                            ->directory('thumbnails')
-                            ->disableLabel(),
+                            ->directory('setting_images'),
                     ]),
 
                     // ** Password
@@ -93,10 +93,9 @@ class Settings extends Page
                             ->label('Password information')
                             ->content('Atualização de senha de segurança')->columnSpan(2),
 
-                        TextInput::make('password')
-                            ->label('Senha atual')
-                            ->password()
-                            ->required(),
+//                        TextInput::make('setting')
+//                            ->label('Senha atual')
+//                            ->password(),
 
 
                     ])->columnSpan(1),
@@ -113,27 +112,24 @@ class Settings extends Page
 
                         // ** Data user
                         Section::make()->schema([
-                                TextInput::make('user.name')
-                                    ->label('Nome')
-                                    ->required(),
-                                TextInput::make('user.email')
-                                    ->label('E-mail')
-                                    ->disabled(),
-                                TextInput::make('user.status')
-                                    ->label('Status do usuário')
-                                    ->required(),
-                                TextInput::make('user.birth')
-                                    ->label('Data anisversário'),
-                                TextInput::make('name')
-                                    ->label('Nome'),
-                            TextInput::make('user.marital_status')
-                                    ->label('Estado civil'),
-                            TextInput::make('user.phone')
-                                    ->label('Fone')->mask('(99) 99999-9999'),
-                            TextInput::make('user.branch_line')
-                                    ->label('Ramal')->numeric()->mask('9999'),
-                                RichEditor::make('user.bio')
-                                    ->label('Biografia')->columnSpan(2),
+                                TextInput::make('header_name')
+                                    ->label('header_name'),
+                                TextInput::make('header_title')
+                                    ->label('header_title'),
+                                TextInput::make('header_description')
+                                    ->label('header_description'),
+                                TextInput::make('section_title')
+                                    ->label('section_title'),
+                                TextInput::make('section_subtitle')
+                                    ->label('section_subtitle'),
+                            TextInput::make('section_description')
+                                    ->label('section_description'),
+                            TextInput::make('footer_phone')
+                                    ->label('footer_phone')->mask('(99) 99999-9999'),
+                            TextInput::make('footer_email')
+                                    ->label('footer_email'),
+                                RichEditor::make('section_about')
+                                    ->label('section_about')->columnSpan(2),
 
                             /**
                              * last_acess - Important
@@ -163,17 +159,17 @@ class Settings extends Page
         $data = $this->form->getState();
         try{
 
-            $this->user->update($data);
+            $this->settings->update($data);
 
             Notification::make()
-                ->title('Usuário processado com sucesso!')
-                ->body('Usuário processado com sucesso!')
+                ->title('Configurações gerais finalizadas com sucesso!')
+                ->body('Todos processos solicitados foram feitos...')
                 ->success()
                 ->send();
         }catch (\Exception $e){
             Notification::make()
                 ->title('Erro ao tentar enviar')
-                ->body('Erro:' . $e->getMessage())
+                ->body('Algum erro ocorreu ao tentar atualizar as configurações gerais...' . $e->getMessage())
                 ->danger()
                 ->send();
         }

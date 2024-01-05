@@ -9,6 +9,7 @@ class Grid extends Component
 {
     public function render()
     {
+        //$users = User::where('status', '=', 'ativo')->get();
         $articles = Article::published()->limit(3)->get();
         $titleSection = 'Artigos';
 
