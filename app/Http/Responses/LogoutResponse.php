@@ -15,6 +15,6 @@ class LogoutResponse implements Responsable
     public function toResponse($request): RedirectResponse
     {
         // change this to your desired route
-        return redirect()->route('web.home');
+        return redirect()->route('web.landing');
     }
 }

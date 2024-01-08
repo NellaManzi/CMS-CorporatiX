@@ -10,6 +10,8 @@
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form method="POST" action="{{ route('login') }}" class="space-y-6">
                 @csrf
+                @method('POST')
+
                     <div>
                         <label for="email" class="block text-sm font-medium leading-6">Endereço de e-mail</label>
                         <div class="mt-2">
@@ -42,7 +44,7 @@
 
             <p class="mt-10 text-center text-sm">
                 Voltar para
-                <a href="{{ route('web.home') }}" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Home</a>?
+                <a href="{{ route('web.landing') }}" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Home</a>?
             </p>
         </div>
     </div>

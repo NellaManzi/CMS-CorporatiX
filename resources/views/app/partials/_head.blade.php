@@ -5,7 +5,5 @@
 <title>CorporatiX Test</title>
 <meta name="description" content="Get started with a free landing page built with Tailwind CSS and the Flowbite Blocks system.">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-<!--=============== REMIXICONS ===============-->
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 @vite('resources/css/app.css')
