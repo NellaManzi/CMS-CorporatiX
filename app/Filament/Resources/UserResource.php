@@ -98,7 +98,7 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('phone')
                     ->mask('(99) 99999-9999'),
                 Forms\Components\TextInput::make('branch_line')
-                    ->numeric()->mask('9999'),
+                    ->numeric()->mask('999-999'),
                 FileUpload::make('avatar')
                     ->disk('public')
                     ->directory('thumbnails')->columnSpanFull(),

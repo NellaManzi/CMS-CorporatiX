@@ -28,13 +28,6 @@
             {{-- ITENS NAVBAR --}}
             <div class="flex items-center">
 
-                {{-- LINK --}}
-                <div class="hidden mr-3 -mb-1 sm:block">
-                    <a class="github-button dark:text-white" href="https://github.com/themesberg/flowbite-admin-dashboard" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/flowbite-admin-dashboard on GitHub">
-                        Home
-                    </a>
-                </div>
-
                 {{-- SEARCH MOBILE --}}
                 <button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                     <span class="sr-only">Buscar</span>
@@ -211,7 +204,7 @@
                                 {{auth()->user()->name}}
                             </p>
                             <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                {{auth()->user()->email}}
+                                Último acesso: {{date_format(auth()->user()->last_acess, 'd/m/Y - H:m')}}
                             </p>
                         </div>
                         <ul class="py-1" role="none">
