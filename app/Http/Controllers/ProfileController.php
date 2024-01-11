@@ -42,7 +42,6 @@ class ProfileController extends Controller
 
         }catch (\Exception $e){
             if(env('APP_DEBUG')){
-                dd($e->getMessage());
                 return redirect()->back();
             }
             return redirect()->back();
