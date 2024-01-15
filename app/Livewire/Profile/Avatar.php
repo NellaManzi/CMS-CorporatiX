@@ -66,29 +66,34 @@ class Avatar extends Component
     {
         try{
             /**
-             * Verificando se o usuário escolheu atualizar a imagem.
+             * link: https://laravel.com/docs/10.x/filesystem#retrieving-files
+             * Verificando se o usuário escolheu atualizar a imagem e se tamanho <= 1024 mb (bytes: 1073741824)
+             * verificar Storage::mimeType('file.jpg')
+             * Storage::path('file.jpg');
              */
 
 
-            if($this->photo){
+            if($this->photo && $this->photo->getSize() <= 1073741824){
 
-                if ($this->user->avatar) {
-                    dd(Storage::exists('/public/storage/'.$this->user->avatar));
-                    // Verifique se o arquivo de imagem existe antes de tentar excluí-lo
-                    //public/storage/thumbnails/01HK7WWGMHC4RT2G1HSHT8ARZG.jpg
-                    if (Storage::exists('storage/'.$this->user->avatar)) {
-                        Storage::delete('storage/'.$this->user->avatar);
-                    }
+
+
+                // Verifique se user tem uma imagem existe para excluir e depois atualizar o avatar
+                if (Storage::disk('public')->exists($this->user->avatar)) {
+                    Storage::disk('public')->delete($this->user->avatar);
                 }
 
                 // Salva a nova imagem
-                $this->user->avatar = $this->photo->store('storage');
+                $extension = '.' . $this->photo->getClientOriginalExtension();
+                $file = 'avatar_' .$this->user->id . time();
 
-                // Remova o prefixo "public/" do caminho da imagem
-                $this->user->avatar = Str::replaceFirst('storage/', '', $this->user->avatar);
+                $this->user->avatar = $this->photo->storeAs('thumbnails', $file .  $extension, 'public');
+                $this->user->save();
+
             }
 
-            return '';
+            return redirect()->route('profile.update')
+                ->with('status', 'Avatar atualizado!');
+
         }catch (\Exception $e){
             if(env('APP_DEBUG')){
                 dd($e->getMessage());

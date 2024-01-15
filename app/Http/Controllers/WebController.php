@@ -38,11 +38,6 @@ class WebController extends Controller
         return view('app.pages.settings');
     }
 
-    public function settings1()
-    {
-        return '';
-    }
-
     public function settings2()
     {
         return '';
