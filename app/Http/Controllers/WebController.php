@@ -15,6 +15,16 @@ class WebController extends Controller
         return view('public.landing', compact('setting'));
     }
 
+    public function dashboard()
+    {
+        /**
+         * @param Article $article
+        */
+        $article = Article::all()->where('status', '=', 'published')->last();
+
+        return view('app.pages.home', compact('article'));
+    }
+
     /**
      * Tests views layout
     */
@@ -26,11 +36,6 @@ class WebController extends Controller
     public function notFound()
     {
         return view('app.pages.404');
-    }
-
-    public function dashboard()
-    {
-        return view('app.pages.home');
     }
 
     public function settings()

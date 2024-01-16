@@ -15,7 +15,7 @@
 
 
         <div x-show="expanded"
-             x-transition:enter="transition ease-out duration-400"
+             x-transition:enter="transition ease-out duration-4400"
              x-transition:enter-start="opacity-0 scale-90"
              x-transition:enter-end="opacity-100 scale-100"
              x-transition:leave="transition ease-in duration-400"
