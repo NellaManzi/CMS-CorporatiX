@@ -21,8 +21,9 @@ class WebController extends Controller
          * @param Article $article
         */
         $article = Article::all()->where('status', '=', 'published')->last();
+        $articles = Article::all()->where('status', '=', 'published')->take(3);
 
-        return view('app.pages.home', compact('article'));
+        return view('app.pages.home', compact('article', 'articles'));
     }
 
     /**

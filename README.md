@@ -80,6 +80,10 @@ Filament neste momento do desenvolvimento está em sua versão 3.0 e será de gr
 nesta versão, é que vamos `modificar a estrutura de classes`, seu diagrama, para melhor atender as novas funcionalidades que 
 vamos criar e listar.
 
+contextualização de problema: informa cada obstáculo durante o desenvolvimento e em que situação ele ocorreu;
+contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema;
+detalhes técnicos: familiarizam o responsável por aquela parte do desenvolvimento sobre como, quando e por que aquela intervenção foi realizada.
+
 #### Visões da Qualidade de Software
 - :star: USUÁRIO - :star: DESENVOLVEDOR - :star: GERENTE
 

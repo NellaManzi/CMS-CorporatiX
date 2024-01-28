@@ -17,14 +17,14 @@ class UserSeeder extends Seeder
         User::updateOrCreate([
             'name'     => 'Rafael Blum',
             'email'    => 'rafaelblum_digital@hotmail.com',
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('123'),
             'status'   => true
         ]);
 
         User::updateOrCreate([
             'name'     => 'Usuário Teste',
             'email'    => 'teste@hotmail.com',
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('teste'),
             'status'   => false
         ]);
     }

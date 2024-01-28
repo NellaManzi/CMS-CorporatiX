@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('play', function () {
+    dd(now()->subYears(25)->format('Y-m-d'), fake()->safeEmail(), '(51) ' . fake()->cellphone);
+});

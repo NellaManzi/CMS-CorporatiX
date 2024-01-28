@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [WebController::class, 'home'])->name('web.landing');
 
+Route::fallback(function (){
+   return redirect('/');
+});
+
 /**
  * APP INTRANET
  */
