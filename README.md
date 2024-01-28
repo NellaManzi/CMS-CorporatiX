@@ -63,10 +63,16 @@ da empresa, afim de resolver problemas de comunicação corporativa e facilitar 
 > de forma constante. Então o CMS é a solução ideal para todo mundo que precisa de um site que não seja 100% estático e momentâneo.
 
 
-### :ok_hand: Contextualização de problema
+### :label: Contextualização de problema
 
-O objetivo desta versão vem devido as novas `tecnologias` em destaque no mercado, como novos recursos, melhorias e idéias para o sistema. 
-E outro objetivo importante é a atualização da stack base como `PHP`, `framework Laravel` até suas `bibliotecas e dependencias`.
+O objetivo é criar uma versão melhor do frontend, mas adaptado aos dispositivos, pois existiram alguns problemas na 
+interface, as lingugens base, bibliotecas e dependencias ficaram desatualizas e melhorar o desempenho de processamento do sistema. 
+Outro problemas é não existir o gerenciamento do portal, uma interface de configurações para os administradores.
+
+
+### :label: Contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema
+Nesta versão serão inseridas novas `tecnologias` em destaque no mercado, novos recursos para melhor desempenho, melhorias na interface e outras idéias para o sistema. 
+Outro objetivo importante é a atualização da stack base como `PHP`, `framework Laravel` nas novas vers]oes até suas `bibliotecas e dependencias` e por fim desenvolver uma area administrativa mais atrativa, moderna e com novos recursos.
 
 :star: Foco no Cliente :star: Evolução da Tecnologia
 
@@ -76,14 +82,6 @@ E outro objetivo importante é a atualização da stack base como `PHP`, `framew
 #### Evolução da Tecnologia
 - Aparecimento de novos recursos e facilidades, elevação dos padrões mínimos de expectativa do cliente, inovação tecnológica deixou de ser diferencial competitivo e
 passou a ser atributo da qualidade.
-
-> hoje em dia, interface gráfica em uma aplicação é considerada condição básica, e não diferencial competitivo.
->
-### :ok_hand: contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema
-
-
-
-
 
 detalhes técnicos: familiarizam o responsável por aquela parte do desenvolvimento sobre como, quando e por que aquela intervenção foi realizada.
 
