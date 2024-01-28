@@ -31,7 +31,10 @@ Checklist das etapas de planejamento para a atualização e desenvolvimento do `
 ##### - Contextualização de problema
 ##### - Contextualização da solução
 ##### - Visões da Qualidade de Software
-##### - Requisitos de software
+
+### :label: Requisitos de software
+##### - requisitos funcionais (RF)
+##### - requisitos não funcionais (RNF)
 
 ### :label: Prototipagem
 ##### - Diagrama Entidade-Relacionamento (DER)
@@ -83,32 +86,31 @@ passou a ser atributo da qualidade.
 
 
 #### :label: Visões da Qualidade de Software
-- :star: USUÁRIO - :star: DESENVOLVEDOR - :star: GERENTE
 
-#### Visão do Usuário
- O usuário está interessado na utilização e no desempenho do
-software
- Há interesse nas medidas externas de qualidade:
+#### :pencil: Visão do Usuário
+:heavy_plus_sign: Preocupações no desenvolvimento, como se o usuário está interessado na utilização e no desempenho do
+software.
+:heavy_plus_sign: Se há interesse nas medidas externas de qualidade, como:
 – as funções especificadas estão disponíveis?
 – qual é a confiabilidade do software e sua eficiência?
 – é fácil de usar?
 – é fácil para transferir para outro ambiente operacional
- Características construtivas não interessam
 
-#### Visão do Desenvolvedor
+
+#### :pencil: Visão do Desenvolvedor
 :heavy_plus_sign: Deve ser coerente com as expectativas do usuário - `requisitos + aceitação`.
 :heavy_plus_sign: Interesse em medidas internas de qualidade.
 – ex: controle de caminhos + tempo de espera = tempo de resposta.
 :heavy_plus_sign: Consideração da qualidade de produtos intermediários.
 
-#### Visão do Gerente de Desenvolvimento
+#### :pencil: Visão do Gerente de Desenvolvimento
 :heavy_plus_sign: Medida global da qualidade - combinação ponderada de atributos e objetivos da empresa.
 :heavy_plus_sign: Equilíbrio da melhoria de qualidade do produto com outros critérios:
 – `prazo`
 – `custo`
 :heavy_plus_sign: Visão é indica a necessidade de uma abordagem mais abrangente - mais próximo do conceito de qualidade de processo.
 
-### :ok_hand: Requisitos de software
+#### :heavy_check_mark: Requisitos de software
 
 Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
 sendo atendidos.
