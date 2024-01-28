@@ -29,6 +29,7 @@ Checklist das etapas de planejamento para a atualização e desenvolvimento do `
 ### :label: Contextualização
 ##### - Sobre
 ##### - Contextualização de problema
+##### - Contextualização da solução
 ##### - Visões da Qualidade de Software
 ##### - Requisitos de software
 
@@ -48,7 +49,7 @@ Checklist das etapas de planejamento para a atualização e desenvolvimento do `
 
 ## :heavy_check_mark: Contextualização
 
-### :ok_hand: Sobre
+### :label: Sobre
 
 [`CorporatiX`](https://corporatix.online/) é um projeto criado para ser um portal da empresa tanto de todos funcionários como da própria empresa. 
 [`CorporatiX`](https://corporatix.online/) será uma `intranet totalmente moderna`, com um site institucional da empresa, com todas qualidades de 
@@ -70,22 +71,18 @@ interface, as lingugens base, bibliotecas e dependencias ficaram desatualizas e 
 Outro problemas é não existir o gerenciamento do portal, uma interface de configurações para os administradores.
 
 
-### :label: Contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema
+### :label: Contextualização de solução
 Nesta versão serão inseridas novas `tecnologias` em destaque no mercado, novos recursos para melhor desempenho, melhorias na interface e outras idéias para o sistema. 
 Outro objetivo importante é a atualização da stack base como `PHP`, `framework Laravel` nas novas vers]oes até suas `bibliotecas e dependencias` e por fim desenvolver uma area administrativa mais atrativa, moderna e com novos recursos.
 
-:star: Foco no Cliente :star: Evolução da Tecnologia
-
-#### Foco no Cliente
 - Tendência em geral e percepção da qualidade (visão do cliente).
-
-#### Evolução da Tecnologia
 - Aparecimento de novos recursos e facilidades, elevação dos padrões mínimos de expectativa do cliente, inovação tecnológica deixou de ser diferencial competitivo e
 passou a ser atributo da qualidade.
+- Uso das tecnoligias da TALL Stack (Tailwindcss, Alpinejs, Laravel e Livewire).
+- Melhoria da area administrativa com a tecnologia Filament Php 3.2.
 
-detalhes técnicos: familiarizam o responsável por aquela parte do desenvolvimento sobre como, quando e por que aquela intervenção foi realizada.
 
-#### Visões da Qualidade de Software
+#### :label: Visões da Qualidade de Software
 - :star: USUÁRIO - :star: DESENVOLVEDOR - :star: GERENTE
 
 #### Visão do Usuário
