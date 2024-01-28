@@ -85,38 +85,31 @@ passou a ser atributo da qualidade.
 - Melhoria da area administrativa com a tecnologia Filament Php 3.2.
 
 
-#### :label: Visões da Qualidade de Software
+### :label: Visões da Qualidade de Software
 
-#### :pencil: Visão do Usuário
-##### :heavy_plus_sign: Preocupações no desenvolvimento, como se o usuário está interessado na utilização e no desempenho do
+#### Visão do Usuário
+- Preocupações no desenvolvimento, como se o usuário está interessado na utilização e no desempenho do
 software.
-##### :heavy_plus_sign: Se há interesse nas medidas externas de qualidade, como:
-– as funções especificadas estão disponíveis?
-– qual é a confiabilidade do software e sua eficiência?
-– é fácil de usar?
-– é fácil para transferir para outro ambiente operacional
+- Se há interesse nas medidas externas de qualidade, como:
+        - as funções especificadas estão disponíveis?
+        - qual é a confiabilidade do software e sua eficiência?
+        - é fácil de usar?
+        - é fácil para transferir para outro ambiente operacional
 
 
-#### :pencil: Visão do Desenvolvedor
-:heavy_plus_sign: Deve ser coerente com as expectativas do usuário - `requisitos + aceitação`.
-:heavy_plus_sign: Interesse em medidas internas de qualidade.
-– ex: controle de caminhos + tempo de espera = tempo de resposta.
-:heavy_plus_sign: Consideração da qualidade de produtos intermediários.
+#### Visão do Desenvolvedor
+- Deve ser coerente com as expectativas do usuário - `requisitos + aceitação`.
+- Interesse em medidas internas de qualidade.
+        - ex: controle de caminhos + tempo de espera = tempo de resposta.
+- Consideração da qualidade de produtos intermediários.
 
-#### :pencil: Visão do Gerente de Desenvolvimento
-Medida global da qualidade - combinação ponderada de atributos e objetivos da empresa.
-:heavy_plus_sign: Equilíbrio da melhoria de qualidade do produto com outros critérios:
-– `prazo`
-– `custo`
-:heavy_plus_sign: Visão é indica a necessidade de uma abordagem mais abrangente - mais próximo do conceito de qualidade de processo.
+## :heavy_check_mark: Requisitos de software
 
-#### :heavy_check_mark: Requisitos de software
-
-Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
+> Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
 sendo atendidos.
 
 
-##### Os requisitos `funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
+### :label: Os requisitos `funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
 - [RF001] :white_check_mark: O Sistema deve autenticar o usuários e administradores.
 - [RF001] O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
 - [RF001] O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
@@ -162,7 +155,7 @@ sendo atendidos.
 - [RF042] O sistema deverá ter um canal com os ramais de todos colaboradores.
 - [RF043] O sistema deverá apresentar na tela inicial a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
 
-###### requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
+### :label: requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
 - [RNF001] :white_check_mark: O sistema deve ser implementado em Php.
 - [RNF002] :white_check_mark: O sistema deve utilizar framework laravel.
 - [RNF003] :white_check_mark: O sistema deve implementado em componentes livewire.
@@ -176,7 +169,7 @@ sendo atendidos.
 - [RNF010] :white_check_mark: O site deve ter segurança contra ataques.
 
 
-#### Requisitos seguidos
+### :label: Requisitos seguidos
 - :star: `Funcionalidade` – Funções do software, que determinam o que o sistema faz. Direcionada para o atendimento dos requisitos do usuário.
 - :star: `Confiabilidade` – Atributos que têm impacto na capacidade do software de manter o seu nível de desempenho, dentro de condições estabelecidas, por um dado período de tempo.
 - :star: `Usabilidade` - Atributos que respondem pela facilidade de uso do software por usuários com perfil específico.
