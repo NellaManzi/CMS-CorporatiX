@@ -110,52 +110,60 @@ sendo atendidos.
 
 
 ### :label: Os `requisitos funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
-- [RF001] :white_check_mark:    O Sistema deve autenticar o usuários e administradores.
-- [RF001]                       O sistema deve ter cadastro de usuários, bem como cadastro de seu perfil de acesso e seus dados. Seu e-mail não poderá se repetir e o usuário poderá ser manipulador somente por administradores.
-- [RF001]                       O registro de um novo usuário só será liberado quando um administrador do sistema receber uma solicitação. E essa solicitação será repassada para o usuário solicitante via e-mail, (aprovado ou não).
-- [RF003] O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
-- [RF004] :white_check_mark: O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
-- [RF005] O Sistema deve ter estatiscas do trávego de navegação dos usuários.
-- [RF006] O Sistema deve ter administração de perguntas frequentes (`analise`).
-- [RF007] O Sistema deve ter administração de .... com CRUD.
-- [RF008] :white_check_mark: O Sistema deve ter administração de categorias (`CRUD`) e relações.
-- [RF009] :white_check_mark: O Sistema deve ter administração dos artigos (`CRUD`) e relações.
-- [RF010] :white_check_mark: O Sistema deve permitir a pesquisa de usuários, categorias e artigos.
-- [RF011] O Sistema deve ter paginação nas listagens.
-- [RF012] O Sistema deve ter administração de configurações do site.
-- [RF013] O Sistema deve ter somente um registro de configuração.
-- [RF014] O Sistema não pode permitir deletar o registro de configuração.
-- [RF015] O Sistema deve permitir .....
-- [RF016] O Sistema deve permitir registro de e-mail de usuário.
-- [RF017] O Sistema deve permitir a administração da listagem do e-mails registrado.
-- [RF018] O Sistema deve permitir mudar o status de e-mail registrado.
-- [RF019] O Sistema deve permitir contato dos usuário via WhatsApp.
-- [RF020] O sistema deverá ter integração do login com o servidor de autenticação baseado em OAuth do Google e/ou Facebook somente se o usuário já tiver cadastro anteriormente, caso contrário, ele deverá realizar o cadastro.
-- [RF021] O sistema terá um menu de opções que dê acesso a todas as funcionalidades que o sistema provê dependendo do seu perfil de acesso.
-- [RF022] O sistema terá estruturado funcionalidades cadastrais listadas abaixo com telas completas e utilizando as operações de CRUD (Create/Retrieve/Update/Delete). Dependendo da regra de negócio, não será utilizado atualização e deletar.
-- [RF023] O usuário deverá ter cadastro de endereço, onde poderá realizar no momento de criação ou em outro momento.
-- [RF024] O usuário deverá ter cadastro de seu cargo e sua edição e exclusão só poderá ser realizado pelos administradores.
-- [RF025] O usuário deverá ter cadastro de sua unidade atual e sua edição e exclusão só poderá ser realizado pelos administradores.
-- [RF026] O sistema permitirá o cadastro das funcionalidades de uma publicação do sistema para administradores. As notícias deverão ter formatação de seu texto, uma imagem que poderá ser feito seu download pelos usuários, uma validade, e sua (s) categoria (s) pré cadastradas anteriormente por um usuário admin. Contando também com likes e deslikes (gostar e não gostar das publicações), visualizações e comentários feitos por qualquer usuário.
-- [RF027] O usuário deverá ter cadastro de categorias se necessário para as publicações.
-- [RF028] O usuário deverá ter cadastro de comentários se necessário para todos usuários, não sendo necessário ter edição e exclusão do comentário, somente se a publicação for excluída o comentário será deletado.
-- [RF029] O usuário deverá ter cadastro de questionários e imagem se necessário. Os questionários poderão ter uma ou mais questões que terão 4 opções de resposta cadastradas e esses questionários só poderão ser respondidos pelos usuários após finalização.
-- [RF030] O sistema deverá ter a funcionalidade de exportação de dados em formato Excel ou PDF nas entidades cargos, categorias, notícias, pedidos de solicitação, questionários, unidades e usuários. 
-- [RF031] Nos campos do cadastro que estão associados a outras entidades do sistema, o usuário deverá ter o mecanismo de lookup dos dados (combobox ou janela de seleção), assim podendo selecionar mais rapidamente o item.
-- [RF032] O sistema deve apresentar pelo menos uma tela em que seja feito cadastro de dados em estrutura mestre/detalhe (duas entidades associadas).
-- [RF033] O sistema deve apresentar pelo menos 3 telas de processamento de transações com suas respectivas regras de negócio a partir das entidades do sistema.
-- [RF034] O sistema terá uma tela de relatório (dashboard) com as estatísticas do sistema de forma gráfica (gráfico de barras, gráfico de linhas, etc.) em que sejam mostrados pelo menos 5 indicadores. Os gráficos que serão mostrados:
-- [RF035] Gráfico de publicações criadas por mês.
-- [RF035] Gráfico geral de likes (gostar) realizados.
-- [RF036] Gráfico de publicações por usuário.
-- [RF038] Gráfico com total de usuários por cargo.
-- [RF039] Gráfico com total de usuários por unidade.
-- [RF040] Além dos gráficos, o sistema deverá mostrar quantos usuários estão online no momento, total de publicações, usuários cadastrados ativos, questionários, visualizações, comentários, categorias, deslikes com porcentagem e listagem com total de questionário respondidos por usuário.
-- [RF041] O sistema permitirá o cadastro das permissões de acesso.
-- [RF042] O sistema deverá ter um canal com os ramais de todos colaboradores.
-- [RF043] O sistema deverá apresentar na tela inicial a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
+- [RF001]                       O Sistema deverá ter um site institucional que será administravel seus dados por um admin.
+- [RF001]                       O Sistema terá uma area restrita para os colaboradores e admins (intranet/App).
+- [RF001]                       O Sistema terá uma dasboard para somente administradores com diversas funcionalidades para todo sistema.
+- [RF001]                       O Sistema deve autenticar o `usuários` e `administradores` atravez de `propriedade que os define`.
+- [RF001]                       O `usuários` poderá acessar somente a area de intranet/App e `administradores` teram acesso a sua area App e dashboard.
+- [RF001]                       O sistema deve ter cadastro de novos usuários por administradores, bem como cadastro de seu `perfil de acesso` e seus dados. Seu `e-mail não poderá se repetir`.
+- [RF001]                       O usuário só será liberado quando um administrador do sistema aprovar ou não seu acesso. E esse acesso será `notificado via e-mail` para o usuário.
+- [RF003]                       O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
+- [RF004] :white_check_mark:    O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
+- [RF005]                       O Sistema deve ter estatiscas do trávego de navegação dos usuários.
+- [RF006]                       O Sistema deve ter administração de perguntas frequentes (`analise`).
+- [RF007]                       O Sistema deve ter `configuração de dados` tanto do site institucional quanto do app e area administrativa.
+- [RF013]                       O Sistema deve ter somente um registro de configuração e não deletavel.
+- [RF007]                       O Sistema deve ter administração de usuários `CRUD`.
+- [RF008] :white_check_mark:    O Sistema deve ter administração de categorias `CRUD` e relações.
+- [RF009] :white_check_mark:    O Sistema deve ter administração dos artigos `CRUD` e relações.
+- [RF009] :white_check_mark:    O Sistema deve ter administração dos tags `CRUD` e relações.
+- [RF010] :white_check_mark:    O Sistema deve permitir a pesquisa de usuários, categorias, tags e artigos.
+- [RF011]                       O Sistema deve ter paginação nas listagens.
+- [RF017]                       O Sistema deve permitir a administração da listagem do e-mails registrado.
+- [RF018]                       O Sistema deve permitir mudar o status de e-mail registrado.
+- [RF019]                       O Sistema deve permitir contato dos usuário via WhatsApp.
+- [RF020]                       O sistema deverá ter integração do `login` com o servidor de autenticação baseado em `OAuth do Google` e/ou `Facebook` somente se o usuário já tiver cadastro liberado por um admin.
+- [RF021]                       O sistema terá um menu de opções que dê `acesso a todas as funcionalidades` que o sistema provê dependendo do seu `perfil de acesso`.
+- [RF023]                       O usuário poderá atualizar seu `endereço`, apos liberação de seu perfil ao sistema, podendo ser vazio.
+- [RF024]                       O usuário poderá atualizar seu `cargo`, apos liberação de seu perfil ao sistema, podendo ser vazio.
+- [RF025]                       O usuário poderá atualizar sua `unidade` atual, apos liberação de seu perfil ao sistema, podendo ser vazio.
 
-### :label: requisitos não funcionais (RNF) definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
+- [RF026]                       O sistema permitirá o cadastro das funcionalidades de uma publicação do sistema para administradores. As notícias deverão ter formatação de seu texto, uma imagem que poderá ser feito seu download pelos usuários, uma validade, e sua (s) categoria (s) pré cadastradas anteriormente por um usuário admin. Contando também com likes e deslikes (gostar e não gostar das publicações), visualizações e comentários feitos por qualquer usuário.
+
+- [RF028]                       O usuário deverá ter cadastro de comentários se necessário para todos usuários, não sendo necessário ter edição e exclusão do comentário, somente se a publicação for excluída o comentário será deletado.
+
+- [RF029]                       O usuário deverá ter cadastro de questionários e imagem se necessário. Os questionários poderão ter uma ou mais questões que terão 4 opções de resposta cadastradas e esses questionários só poderão ser respondidos pelos usuários após finalização.
+
+- [RF030]                       O sistema deverá ter a funcionalidade de exportação de dados em formato Excel ou PDF nas entidades cargos, categorias, notícias, pedidos de solicitação, questionários, unidades e usuários. 
+
+- [RF031]                       Nos campos do cadastro que estão associados a outras entidades do sistema, o usuário deverá ter o mecanismo de lookup dos dados (combobox ou janela de seleção) e pesquisa, assim podendo selecionar mais rapidamente o item.
+- [RF032]                       O sistema deve apresentar pelo menos uma tela em que seja feito cadastro de dados em estrutura mestre/detalhe (duas entidades associadas). Perfil de usuário.
+
+- [RF033]                       ??? O sistema deve apresentar pelo menos 3 telas de processamento de transações com suas respectivas regras de negócio a partir das entidades do sistema.
+
+- [RF034]                       O sistema terá uma tela de relatório (dashboard) com as estatísticas do sistema de forma gráfica (gráfico de barras, gráfico de linhas, etc.) em que sejam mostrados pelo menos 5 indicadores. Os gráficos que serão mostrados:
+- [RF035]                       Gráfico de publicações criadas por mês.
+- [RF035]                       Gráfico geral de likes (gostar) realizados.
+- [RF036]                       Gráfico de publicações por usuário.
+- [RF038]                       Gráfico com total de usuários por cargo.
+- [RF039]                       Gráfico com total de usuários por unidade.
+- [RF040]                       Além dos gráficos, o sistema deverá mostrar quantos usuários estão online no momento, total de publicações, usuários cadastrados ativos, questionários, visualizações, comentários, categorias, deslikes com porcentagem e listagem com total de questionário respondidos por usuário.
+- [RF041]                       O sistema permitirá o cadastro das permissões de acesso por admins.
+- [RF042]                       O sistema deverá ter um canal com os ramais de todos colaboradores.
+
+- [RF043]                       O sistema deverá apresentar na tela inicial do App a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
+
+### :label: `requisitos não funcionais (RNF)` definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
 - [RNF001] :white_check_mark: O sistema deve ser implementado em Php.
 - [RNF002] :white_check_mark: O sistema deve utilizar framework laravel.
 - [RNF003] :white_check_mark: O sistema deve implementado em componentes livewire.
