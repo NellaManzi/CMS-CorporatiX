@@ -88,9 +88,9 @@ passou a ser atributo da qualidade.
 #### :label: Visões da Qualidade de Software
 
 #### :pencil: Visão do Usuário
-:heavy_plus_sign: Preocupações no desenvolvimento, como se o usuário está interessado na utilização e no desempenho do
+##### :heavy_plus_sign: Preocupações no desenvolvimento, como se o usuário está interessado na utilização e no desempenho do
 software.
-:heavy_plus_sign: Se há interesse nas medidas externas de qualidade, como:
+##### :heavy_plus_sign: Se há interesse nas medidas externas de qualidade, como:
 – as funções especificadas estão disponíveis?
 – qual é a confiabilidade do software e sua eficiência?
 – é fácil de usar?
@@ -104,7 +104,7 @@ software.
 :heavy_plus_sign: Consideração da qualidade de produtos intermediários.
 
 #### :pencil: Visão do Gerente de Desenvolvimento
-:heavy_plus_sign: Medida global da qualidade - combinação ponderada de atributos e objetivos da empresa.
+Medida global da qualidade - combinação ponderada de atributos e objetivos da empresa.
 :heavy_plus_sign: Equilíbrio da melhoria de qualidade do produto com outros critérios:
 – `prazo`
 – `custo`
