@@ -23,12 +23,12 @@
 
 <br>
 
-## :rocket: planejamento do sistema [`CMS CorporatiX`](https://www.corporatix.online/)
+## :rocket: Planejamento do sistema [`CMS CorporatiX`](https://www.corporatix.online/)
 Checklist das etapas de planejamento para a atualização e desenvolvimento do `sistema web corporatix`.
 
-### :label: Ideação
-##### - Sobre sistema
-##### - Fatores Responsáveis pela Mudança
+### :label: Contextualização
+##### - Sobre
+##### - Contextualização de problema
 ##### - Visões da Qualidade de Software
 ##### - Requisitos de software
 
@@ -46,21 +46,27 @@ Checklist das etapas de planejamento para a atualização e desenvolvimento do `
 
 <hr style="border: #0d0c22 2px solid; margin-top: 5px; margin-bottom: 5px; "/>
 
-## :heavy_check_mark: Ideação
-
-A ideia deste projeto é criar um `sistema web totalmente mordeno`, com um site que possa ter todas qualidades de desenvolvimento, 
-atendendo a todos requisitos de um `poderoso CMS` para gerenciamento de todas entidades de uma empresa. Sistemas assim, fazem 
-uma grande diferença nas relações de pessoas e negocios em uma empresa.
+## :heavy_check_mark: Contextualização
 
 ### :ok_hand: Sobre
 
-[`CorporatiX`](https://corporatix.online/) será um sistema de Gestão de Conteúdos, de forma bem direta, o CMS permitirá que você crie, organize, publique, 
-configure e apague conteúdos do site. O grande diferencial do CMS, como o próprio nome diz, é a possibilidade de gerenciar 
-conteúdo dinâmico de uma forma simples, ou seja, manter um blog, loja virtual ou outro tipo de site que precisa ser atualizado 
-de forma constante. Então o CMS é a solução ideal para todo mundo que precisa de um site que não seja 100% estático e momentâneo.
+[`CorporatiX`](https://corporatix.online/) é um projeto criado para ser um portal da empresa tanto de todos funcionários como da própria empresa. 
+[`CorporatiX`](https://corporatix.online/) será uma `intranet totalmente moderna`, com um site institucional da empresa, com todas qualidades de 
+desenvolvimento e tecnologias frontend e todos requisitos de um `poderoso CMS` para gerenciamento de todas funcionalidades 
+da empresa, afim de resolver problemas de comunicação corporativa e facilitar o acesso as informações.
 
 
-### :ok_hand: Fatores Responsáveis pela Mudança
+
+> [`CorporatiX`](https://corporatix.online/) será um sistema de Gestão de Conteúdos, de forma bem direta, o CMS permitirá que você crie, organize, publique, 
+> configure e apague conteúdos do site. O grande diferencial do CMS, como o próprio nome diz, é a possibilidade de gerenciar 
+> conteúdo dinâmico de uma forma simples, ou seja, manter um blog, loja virtual ou outro tipo de site que precisa ser atualizado 
+> de forma constante. Então o CMS é a solução ideal para todo mundo que precisa de um site que não seja 100% estático e momentâneo.
+
+
+### :ok_hand: Contextualização de problema
+
+O objetivo desta versão vem devido as novas `tecnologias` em destaque no mercado, como novos recursos, melhorias e idéias para o sistema. 
+E outro objetivo importante é a atualização da stack base como `PHP`, `framework Laravel` até suas `bibliotecas e dependencias`.
 
 :star: Foco no Cliente :star: Evolução da Tecnologia
 
@@ -72,16 +78,13 @@ de forma constante. Então o CMS é a solução ideal para todo mundo que precis
 passou a ser atributo da qualidade.
 
 > hoje em dia, interface gráfica em uma aplicação é considerada condição básica, e não diferencial competitivo.
+>
+### :ok_hand: contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema
 
-Para este update do sistema [`CorporatiX`](https://corporatix.online/), vamos `atualizar todas tecnologias`, deste a sua 
-stack base `PHP` e `framework Laravel` até suas `bibliotecas e dependencias`. Além disso, a ídeia é adicionarmos uma ferramenta 
-muito bem conceituada que será o `Filament`, que irá agilizar com segurança todo desenvolvimento admnistrativo do CMS, o 
-Filament neste momento do desenvolvimento está em sua versão 3.0 e será de grande sucesso para o projeto. Outro detalhes 
-nesta versão, é que vamos `modificar a estrutura de classes`, seu diagrama, para melhor atender as novas funcionalidades que 
-vamos criar e listar.
 
-contextualização de problema: informa cada obstáculo durante o desenvolvimento e em que situação ele ocorreu;
-contextualização de solução: explica as modificações feitas em processos ou no código que corrigiram o problema;
+
+
+
 detalhes técnicos: familiarizam o responsável por aquela parte do desenvolvimento sobre como, quando e por que aquela intervenção foi realizada.
 
 #### Visões da Qualidade de Software
