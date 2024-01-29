@@ -123,10 +123,10 @@ sendo atendidos.
 - [RF006]                       O Sistema deve ter administração de perguntas frequentes (`analise`).
 - [RF007]                       O Sistema deve ter `configuração de dados` tanto do site institucional quanto do app e area administrativa.
 - [RF013]                       O Sistema deve ter somente um registro de configuração e não deletavel.
-- [RF007]                       O Sistema deve ter administração de usuários `CRUD`.
-- [RF008] :white_check_mark:    O Sistema deve ter administração de categorias `CRUD` e relações.
-- [RF009] :white_check_mark:    O Sistema deve ter administração dos artigos `CRUD` e relações.
-- [RF009] :white_check_mark:    O Sistema deve ter administração dos tags `CRUD` e relações.
+- [RF007]                       O Sistema deve ter administração de `usuários CRUD`.
+- [RF008] :white_check_mark:    O Sistema deve ter administração de `categorias  CRUD` e relações.
+- [RF009] :white_check_mark:    O Sistema deve ter administração dos `artigos  CRUD` e relações.
+- [RF009] :white_check_mark:    O Sistema deve ter administração dos `tags  CRUD` e relações.
 - [RF010] :white_check_mark:    O Sistema deve permitir a pesquisa de usuários, categorias, tags e artigos.
 - [RF011]                       O Sistema deve ter paginação nas listagens.
 - [RF017]                       O Sistema deve permitir a administração da listagem do e-mails registrado.
@@ -138,13 +138,16 @@ sendo atendidos.
 - [RF024]                       O usuário poderá atualizar seu `cargo`, apos liberação de seu perfil ao sistema, podendo ser vazio.
 - [RF025]                       O usuário poderá atualizar sua `unidade` atual, apos liberação de seu perfil ao sistema, podendo ser vazio.
 
-- [RF026]                       O sistema permitirá o cadastro das funcionalidades de uma publicação do sistema para administradores. As notícias deverão ter formatação de seu texto, uma imagem que poderá ser feito seu download pelos usuários, uma validade, e sua (s) categoria (s) pré cadastradas anteriormente por um usuário admin. Contando também com likes e deslikes (gostar e não gostar das publicações), visualizações e comentários feitos por qualquer usuário.
+- [RF026]                       O cadastro de um `artigo` deve ser realizado somente por usuários com permissão de acesso a criação.
+- [RF026]                       O artigo deve ter `formatação de texto` upload de imagem que poderá ser feito seu download por todos usuários usuários, data de validade final de publicação, views, likes e deslikes e comentários feitos por qualquer usuário usuário liberado.
+- [RF026]                       O artigo deve ter uma `categoria`, um `usuário criador` e uma ou mais `tags associado` ao artigo.
+- [RF026]                       O artigo deve ter `status de edição` (publicado, rascunho, etc)
 
-- [RF028]                       O usuário deverá ter cadastro de comentários se necessário para todos usuários, não sendo necessário ter edição e exclusão do comentário, somente se a publicação for excluída o comentário será deletado.
+- [RF028]                       O usuário deverá ter cadastro de `comentários` se necessário para todos usuários, não sendo necessário ter edição e exclusão do comentário, somente se a publicação for excluída o comentário será deletado.
 
-- [RF029]                       O usuário deverá ter cadastro de questionários e imagem se necessário. Os questionários poderão ter uma ou mais questões que terão 4 opções de resposta cadastradas e esses questionários só poderão ser respondidos pelos usuários após finalização.
+- [RF029]                       O usuário deverá ter cadastro de `questionários` e imagem se necessário. Os questionários poderão ter uma ou mais questões que terão 4 opções de resposta cadastradas e esses questionários só poderão ser respondidos pelos usuários após finalização.
 
-- [RF030]                       O sistema deverá ter a funcionalidade de exportação de dados em formato Excel ou PDF nas entidades cargos, categorias, notícias, pedidos de solicitação, questionários, unidades e usuários. 
+- [RF030]                       O sistema deverá ter a funcionalidade de `exportação` de dados em formato `Excel ou PDF` nas entidades cargos, categorias, notícias, pedidos de solicitação, questionários, unidades e usuários. 
 
 - [RF031]                       Nos campos do cadastro que estão associados a outras entidades do sistema, o usuário deverá ter o mecanismo de lookup dos dados (combobox ou janela de seleção) e pesquisa, assim podendo selecionar mais rapidamente o item.
 - [RF032]                       O sistema deve apresentar pelo menos uma tela em que seja feito cadastro de dados em estrutura mestre/detalhe (duas entidades associadas). Perfil de usuário.
