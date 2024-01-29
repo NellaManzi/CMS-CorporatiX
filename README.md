@@ -27,24 +27,24 @@
 Checklist das etapas de planejamento para a atualização e desenvolvimento do `sistema web corporatix`.
 
 ### :label: Contextualização
-##### - Sobre
-##### - Contextualização de problema
-##### - Contextualização da solução
-##### - Visões da Qualidade de Software
+- Sobre
+- Contextualização de problema
+- Contextualização da solução
+- Visões da Qualidade de Software
 
 ### :label: Requisitos de software
-##### - requisitos funcionais (RF)
-##### - requisitos não funcionais (RNF)
+- requisitos funcionais (RF)
+- requisitos não funcionais (RNF)
 
 ### :label: Prototipagem
-##### - Diagrama Entidade-Relacionamento (DER)
+- Diagrama Entidade-Relacionamento (DER)
 
 ### :label: Detalhes técnicos
-##### - Definir arquitetura do projeto
-##### - Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
-##### - Problemas e desafios encontrados
-##### - Prototipagem finais
-##### - Conclusão final
+- Definir arquitetura do projeto
+- Definir tecnologias (serviços externos, libs, frameworks, hospedagem etc.)
+- Problemas e desafios encontrados
+- Prototipagem finais
+- Conclusão final
 
 ### :label: Contatos
 
