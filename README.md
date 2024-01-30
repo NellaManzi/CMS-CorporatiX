@@ -108,6 +108,28 @@ software.
 > Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
 sendo atendidos.
 
+### Models entidades do sistema
+- User  `usuário`
+- Address `endereço`
+- unit  `unidade`
+- office  `cargo`
+- Setting  `configuração`
+- Article  `artigo`
+- Article_tag  `artigo tag` | `pivo`
+- Tag  `tag`
+- Category  `categoria`
+- Comment  `comentário`
+- Like  `like`
+- Role  `função`
+- Module  `modulo`
+- Permission  `permissão`
+- Permission_Role  `permissão função` | `pivo`
+- Quiz  `Questionário`
+- Question  `questão`
+- Answer  `resposta`
+- Survey  `enquete`
+- SurveyResponse  `enquete resposta` | `pivo`
+
 
 ### :label: Os `requisitos funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
 - [RF001]                       O Sistema deverá ter um site institucional que será administravel seus dados por um admin.
