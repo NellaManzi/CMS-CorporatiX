@@ -29,7 +29,7 @@ return new class extends Migration
                 'scheduled',
                 'private'
             ])->default('draft');
-            $table->integer('views')->nullable(0);
+            $table->unsignedInteger('views')->nullable(0);
             $table->string('featured_image_url')->nullable();
             $table->timestamps();
         });

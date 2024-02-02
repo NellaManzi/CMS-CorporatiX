@@ -1,3 +1,17 @@
+Pendencias::
+[  ] - Seeders article definir 'draft' e ou 'published' and insert date published_at, sheduled_for.
+[  ] - Ajustar view Home App, condição caso não tenha na collection articles. @if @endif
+[  ] - Seeder User add date now() inicial
+[  ] - Ajustar view Home App autor last_access caso não tenha. @if @endif
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+[  ] -
+
+Comandos de configurações
+- php artisan about
+
 Filament:: app/Filament/Resources
 [ AdminPanel            ] -     app/Providers/Filament/AdminPanelProvider.php
 [ Page settings         ] -     app/Filament/Pages/Settings.php | resources/views/filament/pages/settings.blade.php

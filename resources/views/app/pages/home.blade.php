@@ -41,7 +41,7 @@
 
                         <h3 class="flex items-center mb-4 text-lg font-semibold text-gray-900 dark:text-white">Artigo destaque</h3>
 
-                        <img class="object-cover w-full h-64" src="{{asset('storage/'.$article->featured_image_url)}}" alt="Article">
+{{--                        <img class="object-cover w-full h-64" src="{{asset('storage/'.$article->featured_image_url)}}" alt="Article">--}}
 
                         <div class="p-6">
                             <div>

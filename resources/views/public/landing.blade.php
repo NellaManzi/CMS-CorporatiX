@@ -19,7 +19,7 @@
         <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="https://flowbite.com" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                    <img src="{{asset('storage/' . $setting->head_icon)}}" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">{{$setting->header_name}}</span>
                 </a>
                 <div class="flex items-center lg:order-2">
@@ -75,7 +75,7 @@
     <section class="bg-white dark:bg-gray-900">
         <div class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div class="place-self-center mr-auto lg:col-span-7">
-                <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">{{$setting->header_title}}</h1>
+                <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-5xl dark:text-white">{{$setting->header_title}}</h1>
                 <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{{$setting->header_description}}</p>
                 <a href="#" class="inline-flex justify-center items-center py-3 px-5 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                     Get started
@@ -526,7 +526,7 @@
                 </div>
             </div>
             <hr class="my-8 border-gray-200 lg:my-12 dark:border-gray-700">
-            <span class="block text-center text-gray-600 dark:text-gray-400">© 2023-<span id="currentYear">{{ date('Y')}}</span> <a href="https://flowbite.com" target="_blank" rel="noreferrer">{{$setting->header_name}}</a>. All Rights Reserved.</span>
+            <span class="block text-center text-gray-600 dark:text-gray-400">© 2023-<span id="currentYear">{{ date('Y')}}</span> <a href="https://flowbite.com" target="_blank" rel="noreferrer">{{$setting->header_name}}</a>. All Rights Reserved. | Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</span>
         </div>
     </footer>
 

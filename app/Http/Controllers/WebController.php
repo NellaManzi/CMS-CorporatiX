@@ -11,7 +11,7 @@ class WebController extends Controller
 {
     public function home()
     {
-        $setting = Setting::find(1);
+        $setting = Setting::first();
         return view('public.landing', compact('setting'));
     }
 

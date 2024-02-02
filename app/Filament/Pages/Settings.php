@@ -77,7 +77,7 @@ class Settings extends Page
             ->schema([
                 CustomPlasceHolder::make('title')
                 ->label('Informações gerais')
-                ->content('Pagina de personalização do perfil de usuário.')->columnSpan(3),
+                ->content('Personalização das informações do site institucional')->columnSpan(3),
 
                 /**
                  * ASIDE COMPONENTS
@@ -86,70 +86,66 @@ class Settings extends Page
 
                     // ** Avatar user
                     Section::make()->schema([
-                        CustomPlasceHolder::make('teste')
-                            ->label('Profile picture')
+                        CustomPlasceHolder::make('Placeholder')
+                            ->label('Imagem principal site')
                             ->content('JPG, GIF or PNG. Max size of 1024'),
+
                         FileUpload::make('header_logo_url')
+                            ->disableLabel(true)
                             ->disk('public')
                             ->directory('setting_images')
-                            ->imagePreviewHeight('150')
-                            ->loadingIndicatorPosition('left')
-                            ->panelAspectRatio('2:1')
-                            ->panelLayout('integrated')
-                            ->removeUploadedFileButtonPosition('right')
-                            ->uploadButtonPosition('left')
-                            ->uploadProgressIndicatorPosition('left')
-                            ->openable()
-                            ->downloadable()
-                            ->previewable(true)
-                            ->acceptedFileTypes(['image/png'])
-                            ->maxSize(1024),
+                            ,
                     ]),
 
-
                     Section::make()->schema([
 
-                        CustomPlasceHolder::make('section_logo_url')
-                            ->label('Profile picture')
-                            ->content('JPG, GIF or PNG. Max size of 1024')->columnSpan(2),
+                        Section::make()->schema([
 
-                        FileUpload::make('section_logo_url')
-                            ->disk('public')
-                            ->directory('setting_images')
-                            ->image()
-                            ->avatar()
-                            ->imageEditor()
-                            ->circleCropper()
-                            ->acceptedFileTypes(['image/png', 'image/jpeg']),
+                            CustomPlasceHolder::make('section_logo_url')
+                                ->label('Image de sessão')
+                                ->content('JPG ou PNG. Max size of 1024')->columnSpan(2),
 
-
-                    ])->columnSpan(1),
-
-                    Section::make()->schema([
-
-                        CustomPlasceHolder::make('head_icon')
-                            ->label('Profile picture')
-                            ->content('JPG, GIF or PNG. Max size of 1024')->columnSpan(2),
-
-                        FileUpload::make('head_icon')
-                            ->disk('public')
-                            ->directory('setting_images')
-                            ->image()
-                            ->imageEditor()
-                            ->imageEditorAspectRatios([
-                                null,
-                                '16:9',
-                                '4:3',
-                                '1:1',
-                            ])
-                            ->imageEditorViewportWidth('1920')
-                            ->imageEditorViewportHeight('1080')
-                            ->openable()
-                            ->acceptedFileTypes(['image/png', 'image/jpeg']),
+                            FileUpload::make('section_logo_url')
+                                ->disableLabel(true)
+                                ->disk('public')
+                                ->directory('setting_images')
+                                ->image()
+                                ->avatar()
+                                ->imageEditor()
+                                ->circleCropper()
+                                ->acceptedFileTypes(['image/png', 'image/jpeg']),
 
 
-                    ])->columnSpan(1),
+                        ])->columnSpan(1),
 
+                        Section::make()->schema([
+
+                            CustomPlasceHolder::make('head_icon')
+                                ->label('Imagem favicon')
+                                ->content('JPG ou PNG. Max size of 1024')->columnSpan(2),
+
+                            FileUpload::make('head_icon')
+                                ->disableLabel(true)
+                                ->disk('public')
+                                ->directory('setting_images')
+                                ->image()
+                                ->imageEditor()
+                                ->avatar()
+                                ->imageEditorAspectRatios([
+                                    null,
+                                    '16:9',
+                                    '4:3',
+                                    '1:1',
+                                ])
+                                ->imageEditorViewportWidth('1920')
+                                ->imageEditorViewportHeight('1080')
+                                ->openable()
+                                ->acceptedFileTypes(['image/png', 'image/jpeg']),
+
+
+                        ])->columnSpan(1),
+
+                    ])->columnSpan(2)->columns(2),
                 ])->columnSpan(1)->columns(1),
 
 
@@ -157,27 +153,26 @@ class Settings extends Page
                 /**
                  * CONTENTS COMPONENTS
                  */
-                Group::make()
-                    ->schema([
+                Group::make()->schema([
 
                         // ** Data user
                         Section::make()->schema([
                                 TextInput::make('header_name')
-                                    ->label('header_name'),
+                                    ->label('Nome site principal'),
                                 TextInput::make('header_title')
-                                    ->label('header_title'),
+                                    ->label('Titulo do banner principal'),
                                 TextInput::make('header_description')
-                                    ->label('header_description'),
+                                    ->label('Descrição banner resumida'),
                                 TextInput::make('section_title')
-                                    ->label('section_title'),
+                                    ->label('Titulo da sessão'),
                                 TextInput::make('section_subtitle')
-                                    ->label('section_subtitle'),
+                                    ->label('SubTitulo sessão'),
                             TextInput::make('section_description')
-                                    ->label('section_description'),
+                                    ->label('Descrição de sessão resumida'),
                             TextInput::make('footer_phone')
-                                    ->label('footer_phone')->mask('(99) 99999-9999'),
+                                    ->label('Telefone')->mask('(99) 99999-9999'),
                             TextInput::make('footer_email')
-                                    ->label('footer_email'),
+                                    ->label('E-mail institucional principal'),
 
 
 

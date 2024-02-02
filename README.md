@@ -108,35 +108,13 @@ software.
 > Avaliação das especificações do software durante o desenvolvimento para verificar se os requisitos de qualidade estão
 sendo atendidos.
 
-### Models entidades do sistema
-- User  `usuário`
-- Address `endereço`
-- unit  `unidade`
-- office  `cargo`
-- Setting  `configuração`
-- Article  `artigo`
-- Article_tag  `artigo tag` | `pivo`
-- Tag  `tag`
-- Category  `categoria`
-- Comment  `comentário`
-- Like  `like`
-- Role  `função`
-- Module  `modulo`
-- Permission  `permissão`
-- Permission_Role  `permissão função` | `pivo`
-- Quiz  `Questionário`
-- Question  `questão`
-- Answer  `resposta`
-- Survey  `enquete`
-- SurveyResponse  `enquete resposta` | `pivo`
 
-
-### :label: Os `requisitos funcionais (RF)` referem-se sobre o que o sistema deve fazer, ou seja, suas funções e informações.
-- [RF001]                       O Sistema deverá ter um site institucional que será administravel seus dados por um admin.
-- [RF001]                       O Sistema terá uma area restrita para os colaboradores e admins (intranet/App).
-- [RF001]                       O Sistema terá uma dasboard para somente administradores com diversas funcionalidades para todo sistema.
-- [RF001]                       O Sistema deve autenticar o `usuários` e `administradores` atravez de `propriedade que os define`.
-- [RF001]                       O `usuários` poderá acessar somente a area de intranet/App e `administradores` teram acesso a sua area App e dashboard.
+### :label: Os `requisitos funcionais (RF)`
+- [RF001] :white_check_mark:    O Sistema deverá ter um site institucional que será administravel seus dados por um admin.
+- [RF002] :white_check_mark:    O Sistema terá uma area restrita para os colaboradores e admins (intranet/App).
+- [RF003] :white_check_mark:    O Sistema terá uma dasboard para somente administradores com diversas funcionalidades para todo sistema.
+- [RF004]                       O Sistema deve autenticar o `usuários` e `administradores` atravez de `atributo que os definem`.
+- [RF001]                       O `usuários` poderá acessar somente a area de intranet/App e `administradores` teram acesso a area App e dashboard.
 - [RF001]                       O sistema deve ter cadastro de novos usuários por administradores, bem como cadastro de seu `perfil de acesso` e seus dados. Seu `e-mail não poderá se repetir`.
 - [RF001]                       O usuário só será liberado quando um administrador do sistema aprovar ou não seu acesso. E esse acesso será `notificado via e-mail` para o usuário.
 - [RF003]                       O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
@@ -188,7 +166,8 @@ sendo atendidos.
 
 - [RF043]                       O sistema deverá apresentar na tela inicial do App a última publicação em destaque, os aniversariantes do mês e uma listagem com as últimas 8 notícias e questionários.
 
-### :label: `requisitos não funcionais (RNF)` definem propriedades e restrições do sistema como tempo, espaço, linguagens de programação, versões do compilador, SGBD, Sistema Operacional, método de desenvolvimento, etc.
+
+### :label: `requisitos não funcionais (RNF)`
 - [RNF001] :white_check_mark: O sistema deve ser implementado em Php.
 - [RNF002] :white_check_mark: O sistema deve utilizar framework laravel.
 - [RNF003] :white_check_mark: O sistema deve implementado em componentes livewire.
@@ -215,6 +194,28 @@ sendo atendidos.
 A etapa de front end no projeto é uma etapa que estou me desenvolvendo e me atualizando cada vez mais, buscando as melhores praticas de estilização,
 codifificação e sempre buscando desafios, com tecnologias novas. 
 E neste projeto foi realizado uma pesquisa para se colocar o melhor layout, e personalização para uma experiencia de interface moderna, prática para usuários.
+
+### Models entidades do sistema
+- User  `usuário`
+- Address `endereço`
+- unit  `unidade`
+- office  `cargo`
+- Setting  `configuração`
+- Article  `artigo`
+- Article_tag  `artigo tag` | `pivo`
+- Tag  `tag`
+- Category  `categoria`
+- Comment  `comentário`
+- Like  `like`
+- Role  `função`
+- Module  `modulo`
+- Permission  `permissão`
+- Permission_Role  `permissão função` | `pivo`
+- Quiz  `Questionário`
+- Question  `questão`
+- Answer  `resposta`
+- Survey  `enquete`
+- SurveyResponse  `enquete resposta` | `pivo`
 
 <p align="center">
 	<a href="#"  target="_blank" title="logo">
