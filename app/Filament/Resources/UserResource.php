@@ -68,6 +68,11 @@ class UserResource extends Resource
                             ->password()
                             ->required()
                             ->maxLength(255),
+
+                        Select::make('role_id')
+                            ->label('Tipo de permissão de usuário')
+                            ->preload()
+                            ->relationship('role', 'name'),
                     ]),
 
 

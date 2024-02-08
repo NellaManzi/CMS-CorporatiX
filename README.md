@@ -116,7 +116,7 @@ sendo atendidos.
 - [RF004]                       O Sistema deve autenticar o `usuários` e `administradores` atravez de `atributo que os definem`.
 - [RF001]                       O `usuários` poderá acessar somente a area de intranet/App e `administradores` teram acesso a area App e dashboard.
 - [RF001]                       O sistema deve ter cadastro de novos usuários por administradores, bem como cadastro de seu `perfil de acesso` e seus dados. Seu `e-mail não poderá se repetir`.
-- [RF001]                       O usuário só será liberado quando um administrador do sistema aprovar ou não seu acesso. E esse acesso será `notificado via e-mail` para o usuário.
+- [RF007]`:Em desenvolvimento:` O usuário só será liberado quando um administrador do sistema aprovar ou não seu acesso. E esse acesso será `notificado via e-mail` para o usuário.
 - [RF003]                       O sistema terá controle de acesso a funcionalidades a partir de suas (ACL) permissões de cada perfil de usuário e administradores do sistema.
 - [RF004] :white_check_mark:    O Sistema deve ter uma dashboard administrativa com menu das funcionalidades.
 - [RF005]                       O Sistema deve ter estatiscas do trávego de navegação dos usuários.
@@ -268,7 +268,8 @@ O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https:/
 - :label: 
 - :label: 
 - :label: 
-
+- :label: [RF007]: Criando class Observer de User para observar os eventos de criação, para posterior envio de e-mail para usuários com seu `Email e senha` de acesso.
+                    - https://laravel.com/docs/10.x/eloquent#observers
 
 ### :star: Contatos
 

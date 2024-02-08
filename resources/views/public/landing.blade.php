@@ -117,7 +117,7 @@
                 </div>
 
                 <div class="w-full sm:w-1/2 p-6">
-                    <img src="{{asset('storage/' . $setting->header_logo_url)}}" alt="{{$setting->section_title}}">
+                    <img src="{{asset('storage/' . $setting->section_logo_url)}}" alt="{{$setting->section_title}}" class="w-full">
                 </div>
             </div>
         </div>
