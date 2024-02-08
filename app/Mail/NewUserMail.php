@@ -23,6 +23,7 @@ class NewUserMail extends Mailable implements ShouldQueue
      */
     public function __construct(
         public readonly User $user,
+        public readonly string $secret,
     )
     {
 
@@ -35,7 +36,7 @@ class NewUserMail extends Mailable implements ShouldQueue
     {
         return new Envelope(
             from:new Address(config('mail.from.address'), config('app.name')),
-            subject: 'Seu acesso a intranet ' . config('app.name') . ' foi liberado!',
+            subject: 'Seu acesso a ' . config('app.name') . ' foi liberado!',
         );
     }
 
@@ -44,10 +45,13 @@ class NewUserMail extends Mailable implements ShouldQueue
      */
     public function content(): Content
     {
+
         return new Content(
             view: 'emails.new-user',
             with: [
                 'user'  => $this->user,
+                'secret' => $this->secret,
+                'app' => config('app.name')
             ]
         );
     }

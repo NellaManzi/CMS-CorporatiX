@@ -493,7 +493,7 @@
                                     {{auth()->user()->name}}
                                 </p>
                                 <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                    Último acesso: {{date_format(auth()->user()->last_acess, 'd/m/Y - H:m')}}
+                                    Último acesso: {{(auth()->user()->last_acess != null ? date_format(auth()->user()->last_acess, 'd/m/Y - H:m') : date('d/m/Y'))}}
                                 </p>
                             </div>
                             <ul class="py-1" role="none">

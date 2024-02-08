@@ -4,7 +4,10 @@ namespace App\Observers;
 
 use App\Mail\NewUserMail;
 use App\Models\User;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class UserObserver
 {
@@ -13,8 +16,13 @@ class UserObserver
      */
     public function created(User $user): void
     {
-//        $user->saveQuietly();
-        Mail::to($user->email)->send(new NewUserMail($user));
+
+        $secret = $secret = Str::random(8);
+        $user->password = Hash::make($secret);
+
+
+        $user->saveQuietly();
+        Mail::to($user->email)->send(new NewUserMail($user, $secret));
     }
 
     /**
