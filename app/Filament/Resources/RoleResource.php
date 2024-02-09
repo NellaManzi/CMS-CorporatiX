@@ -6,6 +6,7 @@ use App\Filament\Resources\RoleResource\Pages;
 use App\Filament\Resources\RoleResource\RelationManagers;
 use App\Models\Role;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -37,6 +38,13 @@ class RoleResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('description')
                     ->maxLength(255),
+
+                Select::make('Permições')
+                    ->label('Permissões da função')
+                    ->multiple()
+                    ->preload()
+                    ->relationship('permissions', 'name'),
+
                 Forms\Components\Toggle::make('deletable')
                     ->required(),
             ]);

@@ -70,9 +70,10 @@ class UserResource extends Resource
                             ->maxLength(255),
 
                         Select::make('role_id')
-                            ->label('Tipo de permissão de usuário')
+                            ->label('Função do usuário')
                             ->preload()
                             ->relationship('role', 'name'),
+
                     ]),
 
 
