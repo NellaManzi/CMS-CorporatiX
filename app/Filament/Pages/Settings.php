@@ -39,8 +39,8 @@ class Settings extends Page
      *              - resources/views/forms/components
      *
     */
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
-
+    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
+    protected static ?string $activeNavigationIcon = 'heroicon-o-wrench-screwdriver';
 
     protected static ?string $navigationLabel = "Configurações";
 

@@ -25,11 +25,13 @@ class CategoryResource extends Resource
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationGroup = "Blog";
+    protected static ?string $navigationIcon = 'heroicon-o-bookmark';
+    protected static ?string $activeNavigationIcon = 'heroicon-o-book-open';
 
     protected static ?string $pluralModelLabel = "Categorias";
     protected static ?string $modelLabel = "Categoria";
 
-    protected static ?string $navigationIcon = 'heroicon-o-bookmark';
+
 
     /**
      * Form create or edit category

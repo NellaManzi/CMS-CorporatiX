@@ -47,12 +47,13 @@ class ArticleResource extends Resource
     protected static ?string $model = Article::class;
 
     protected static ?string $navigationGroup = "Blog";
-
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+    protected static ?string $activeNavigationIcon = 'heroicon-o-book-open';
 
     protected static ?string $pluralModelLabel = "Artigos";
     protected static ?string $modelLabel = "Artigo";
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
 
     /**
      * Form create or edit article

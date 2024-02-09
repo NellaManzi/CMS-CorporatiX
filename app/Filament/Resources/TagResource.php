@@ -21,11 +21,13 @@ class TagResource extends Resource
     protected static ?string $model = Tag::class;
 
     protected static ?string $navigationGroup = "Blog";
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
+    protected static ?string $activeNavigationIcon = 'heroicon-o-book-open';
 
     protected static ?string $pluralModelLabel = "Tags";
     protected static ?string $modelLabel = "Tag";
 
-    protected static ?string $navigationIcon = 'heroicon-o-tag';
+
 
     public static function form(Form $form): Form
     {
