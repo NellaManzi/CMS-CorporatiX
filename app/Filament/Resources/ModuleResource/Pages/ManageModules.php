@@ -4,9 +4,9 @@ namespace App\Filament\Resources\ModuleResource\Pages;
 
 use App\Filament\Resources\ModuleResource;
 use Filament\Actions;
-use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Pages\ManageRecords;
 
-class ListModules extends ListRecords
+class ManageModules extends ManageRecords
 {
     protected static string $resource = ModuleResource::class;
 
