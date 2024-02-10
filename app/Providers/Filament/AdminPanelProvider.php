@@ -34,8 +34,8 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Corporatix')
             ->darkModeBrandLogo(fn(): View => view('filament.brand-logo'))
             //->brandLogoHeight(fn() => auth()->check() ? '1rem':'5rem')
-            ->brandLogo(asset('image/readme/iconLogoCorporatix.png'))
-            ->favicon(asset('image/readme/iconLogoCorporatix.png'))
+            ->brandLogo(asset('image/Projeto_Converter_em_PNG-removebg-preview.png'))
+            ->favicon(asset('image/icon-freezer-control-removebg-preview.png'))
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Fuchsia,

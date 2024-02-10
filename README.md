@@ -274,6 +274,9 @@ O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https:/
 - :label: [RF007]: Criando class Observer de User para observar os eventos de criação, para posterior envio de e-mail para usuários com seu `Email e senha` de acesso.
                     - https://laravel.com/docs/10.x/eloquent#observers
 
+##### Examples links
+- Customização da pagina de registrar user [Filament authenticate](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
+
 ### :star: Contatos
 
 Contatos 👇🏼 [rafaelblum_digital@hotmail.com]
