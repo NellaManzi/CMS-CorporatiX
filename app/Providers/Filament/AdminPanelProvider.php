@@ -31,11 +31,11 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Corporatix')
-            ->darkModeBrandLogo(fn(): View => view('filament.brand-logo'))
-            //->brandLogoHeight(fn() => auth()->check() ? '1rem':'5rem')
-            ->brandLogo(asset('image/Projeto_Converter_em_PNG-removebg-preview.png'))
-            ->favicon(asset('image/icon-freezer-control-removebg-preview.png'))
+            ->brandName(asset('image/brands/icon-340.png'))
+            ->brandName(config('app.name'))
+            ->darkModeBrandLogo(fn(): View => view('filament.partials.logo.brand-logo-dark'))
+            ->brandLogo(fn(): View => view('filament.partials.logo.brand-logo'))
+            ->favicon(asset('image/brands/icon-340.png'))
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Fuchsia,
