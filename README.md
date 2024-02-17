@@ -266,13 +266,14 @@ O diagrama de classes do projeto, foi realizado no software  [`StarUML`](https:/
 - :label: :heavy_check_mark: Criação das Resources do Filament das migrates.
 - :label: :boom: Configurações da ArticleResource de form, table, infolist.
 - :label: :boom: Ajustes da section blog com component article\Grid.
-- :label: 
-- :label: 
-- :label: 
+- :label: :boom: Criado as relações de Role, Permission e module.
+- :label: :boom: 
+- :label: :boom: 
 - :label: 
 - :label: 
 - :label: [RF007]: Criando class Observer de User para observar os eventos de criação, para posterior envio de e-mail para usuários com seu `Email e senha` de acesso.
                     - https://laravel.com/docs/10.x/eloquent#observers
+- ctrl+alt+shift+L
 
 ##### Examples links
 - Customização da pagina de registrar user [Filament authenticate](https://filamentphp.com/docs/3.x/panels/users#customizing-the-authentication-features)
